@@ -1,0 +1,49 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9D17DD1F-AAD5-4FFF-8A41-20AB88C27B22}|InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223.csproj|c:\\users\\givenchie\\desktop\\inventorymanagementsystemcmpg223\\inventorymanagementsystemcmpg223\\homepage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9D17DD1F-AAD5-4FFF-8A41-20AB88C27B22}|InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223.csproj|solutionrelative:inventorymanagementsystemcmpg223\\homepage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Homepage.html",
+              "DocumentMoniker": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223\\Homepage.html",
+              "RelativeDocumentMoniker": "InventoryManagementSystemCMPG223\\Homepage.html",
+              "ToolTip": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223\\Homepage.html",
+              "RelativeToolTip": "InventoryManagementSystemCMPG223\\Homepage.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-07-22T19:08:52.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
