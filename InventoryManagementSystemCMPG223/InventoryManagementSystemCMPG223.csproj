@@ -67,13 +67,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Homepage.html" />
+    <Content Include="App_Data\InventoryManagementSystemDB.mdf" />
+    <Content Include="App_Data\InventoryManagementSystemDB_log.ldf">
+      <DependentUpon>InventoryManagementSystemDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="MasterStyles.css" />
     <Content Include="Web.config" />
+    <Content Include="Homepage.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MainPage.Master.cs">
+      <DependentUpon>MainPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainPage.Master.designer.cs">
+      <DependentUpon>MainPage.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Homepage.aspx.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Homepage.aspx.designer.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MainPage.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9D17DD1F-AAD5-4FFF-8A41-20AB88C27B22}|InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223.csproj|c:\\users\\givenchie\\desktop\\inventorymanagementsystemcmpg223\\inventorymanagementsystemcmpg223\\homepage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9D17DD1F-AAD5-4FFF-8A41-20AB88C27B22}|InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223.csproj|solutionrelative:inventorymanagementsystemcmpg223\\homepage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9D17DD1F-AAD5-4FFF-8A41-20AB88C27B22}|InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223.csproj|c:\\users\\givenchie\\desktop\\inventorymanagementsystemcmpg223\\inventorymanagementsystemcmpg223\\homepage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9D17DD1F-AAD5-4FFF-8A41-20AB88C27B22}|InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223.csproj|solutionrelative:inventorymanagementsystemcmpg223\\homepage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D17DD1F-AAD5-4FFF-8A41-20AB88C27B22}|InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223.csproj|c:\\users\\givenchie\\desktop\\inventorymanagementsystemcmpg223\\inventorymanagementsystemcmpg223\\mainpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{9D17DD1F-AAD5-4FFF-8A41-20AB88C27B22}|InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223.csproj|solutionrelative:inventorymanagementsystemcmpg223\\mainpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Homepage.html",
-              "DocumentMoniker": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223\\Homepage.html",
-              "RelativeDocumentMoniker": "InventoryManagementSystemCMPG223\\Homepage.html",
-              "ToolTip": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223\\Homepage.html",
-              "RelativeToolTip": "InventoryManagementSystemCMPG223\\Homepage.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-07-22T19:08:52.373Z",
+              "Title": "Homepage.aspx",
+              "DocumentMoniker": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223\\Homepage.aspx",
+              "RelativeDocumentMoniker": "InventoryManagementSystemCMPG223\\Homepage.aspx",
+              "ToolTip": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223\\Homepage.aspx",
+              "RelativeToolTip": "InventoryManagementSystemCMPG223\\Homepage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-07-22T20:11:22.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPage.Master",
+              "DocumentMoniker": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223\\MainPage.Master",
+              "RelativeDocumentMoniker": "InventoryManagementSystemCMPG223\\MainPage.Master",
+              "ToolTip": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223\\MainPage.Master",
+              "RelativeToolTip": "InventoryManagementSystemCMPG223\\MainPage.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-07-22T20:10:49.509Z",
               "EditorCaption": ""
             },
             {
