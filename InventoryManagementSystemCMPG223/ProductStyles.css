@@ -1,0 +1,33 @@
+﻿
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Cascadia Code';
+}
+
+#Name,#Description,#Size,#Price,#ProductId{
+    border-radius:5px;
+    border:0.2px solid grey;
+    margin:10px;
+    padding:20px;
+    width:500px;
+}
+
+#AddProductBtn{
+    padding:20px;
+    width:550px;
+    border:none;
+    border-radius:5px;
+    background-color:deepskyblue;
+    color:white;
+}
+.content{
+    align-content:center;
+    align-items:center;
+    margin-left:200px;
+}
+
+#AddLipstickHeading{
+    font-size:30px;
+    text-align:center;
+}
