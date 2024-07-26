@@ -27,13 +27,17 @@
                           <asp:TextBox ID="Description" runat="server" placeholder="item description"></asp:TextBox><br/>
                           <asp:TextBox ID="Size" runat="server" placeholder="item size"></asp:TextBox><br/>
                           <asp:Button ID="AddProductBtn" runat="server" Text="Add Lipstick" OnClick="AddProduct_Click" /> <br />
-                          <asp:Label ID="FeedbackLbl" runat="server" Text=""></asp:Label>
+                          <asp:Label ID="FeedbackLbl" runat="server" Text=""></asp:Label><br />
                     </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>
+
+
+                        <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Products.aspx" runat="server">See products</asp:HyperLink>
+                    </td>
                     <td>&nbsp;</td>
                 </tr>
             </table>

@@ -17,8 +17,7 @@ namespace InventoryManagementSystemCMPG223
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        
-        
+       
         }
 
         //DEPENDENCIES
@@ -98,83 +97,12 @@ namespace InventoryManagementSystemCMPG223
 
 
 
-        //UPDATE DATABASE
-        public void UpdateProduct(string query,string keyword)
-        {
-            try
-            {
-                conn = new SqlConnection(ConnString);
-                conn.Open();
-
-                cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("keyword", keyword);
-
-                adapter.UpdateCommand = cmd;
-
-                int countUpdated = adapter.UpdateCommand.ExecuteNonQuery();
-                if(countUpdated > 0)
-                {
-                    FeedbackLbl.Text = $"Successfully updated {keyword}";
-                }
-                else
-                {
-                    FeedbackLbl.Text = $"Failed to update {keyword}";
-                }
-                
-            }
-            catch (SqlException ex)
-            {
-                ex.ToString();
-            }
-            catch (Exception e)
-            {
-                e.ToString();
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
+      
 
 
         //DELETE FROM DATABASE
 
-        public void DeleteProduct(string query, string keyword)
-        {
-            try
-            {
-                conn = new SqlConnection(ConnString);
-                conn.Open();
-
-                cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("keyword", keyword);
-
-                adapter.DeleteCommand = cmd;
-
-                int CountDeleted = adapter.UpdateCommand.ExecuteNonQuery();
-                if (CountDeleted > 0)
-                {
-                    FeedbackLbl.Text = $"Successfully deleted {keyword}";
-                }
-                else
-                {
-                    FeedbackLbl.Text = $"Failed to delete {keyword}";
-                }
-
-            }
-            catch (SqlException ex)
-            {
-                ex.ToString();
-            }
-            catch (Exception e)
-            {
-                e.ToString();
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
+        
 
 
         //VALIDATE FORM INPUT
