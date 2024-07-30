@@ -29,6 +29,7 @@
     border-radius: 5px;
     background-color: deepskyblue;
     color: white;
+    height:60px;
 }
 
 
@@ -52,8 +53,36 @@
     text-align:center;
 }
 #ProductsGridView{
-
    padding:20px;
    margin:10px;
-   
+   height:100px;
+}
+
+#HyperLink5, #HyperLink6, #HyperLink7, #HyperLink8 {
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    margin: 20px;
+    display:flex;
+    flex-direction:column;
+}
+.sidebar{
+    height:300px;
+    margin:10px;
+
+}
+
+
+ #HyperLink5:hover, #HyperLink6:hover, #HyperLink7:hover,#HyperLink8:hover {
+        text-decoration-line: underline;
+        text-underline-offset: 10px;
+        text-decoration-color: skyblue;
+        text-decoration-thickness: 2px;
+    }
+
+#AddLipstickHeading{
+    display:flex;
+    flex-direction:row;
+    align-content:center;
+    align-items:center;
 }

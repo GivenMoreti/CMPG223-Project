@@ -12,11 +12,12 @@ namespace InventoryManagementSystemCMPG223
 {
     public partial class Products : System.Web.UI.Page
     {
-        
+
 
         //DEPENDENCIES
 
         string ConnString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\InventoryManagementSystemDB.mdf;Integrated Security=True";
+        //readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManagementSystemDB;Integrated Security=True;Trust Server Certificate=True";
         SqlConnection conn;
         SqlDataAdapter adapter;
         SqlCommand cmd;
@@ -28,15 +29,14 @@ namespace InventoryManagementSystemCMPG223
             //IF NOT POSTBACK
             if (!IsPostBack)
             {
-                GetProducts("select * from producttable");
+               GetProducts("SELECT * FROM producttable");
+                //GetProducts("select * from producttable");
 
             }
         }
 
         //CreateProduct cp = new CreateProduct();
         //cp.GetProducts(query);
-
-
 
 
         //RETRIEVALS
@@ -51,7 +51,6 @@ namespace InventoryManagementSystemCMPG223
                 conn.Open();
 
                 cmd = new SqlCommand(query, conn);
-
 
 
                 adapter.SelectCommand = cmd;
