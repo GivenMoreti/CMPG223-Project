@@ -71,21 +71,46 @@
     <Content Include="App_Data\InventoryManagementSystemDB_log.ldf">
       <DependentUpon>InventoryManagementSystemDB.mdf</DependentUpon>
     </Content>
+    <Content Include="CreateCustomer.aspx" />
     <Content Include="CreateProduct.aspx" />
+    <Content Include="Customers.aspx" />
+    <Content Include="DeleteCustomer.aspx" />
     <Content Include="DeleteProduct.aspx" />
     <Content Include="Homepage.aspx" />
     <Content Include="Products.aspx" />
     <Content Include="ProductStyles.css" />
+    <Content Include="UpdateCustomer.aspx" />
     <Content Include="UpdateProduct.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateCustomer.aspx.cs">
+      <DependentUpon>CreateCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateCustomer.aspx.designer.cs">
+      <DependentUpon>CreateCustomer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CreateProduct.aspx.cs">
       <DependentUpon>CreateProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CreateProduct.aspx.designer.cs">
       <DependentUpon>CreateProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customers.aspx.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customers.aspx.designer.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteCustomer.aspx.cs">
+      <DependentUpon>DeleteCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteCustomer.aspx.designer.cs">
+      <DependentUpon>DeleteCustomer.aspx</DependentUpon>
     </Compile>
     <Compile Include="DeleteProduct.aspx.cs">
       <DependentUpon>DeleteProduct.aspx</DependentUpon>
@@ -109,6 +134,13 @@
       <DependentUpon>Products.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateCustomer.aspx.cs">
+      <DependentUpon>UpdateCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateCustomer.aspx.designer.cs">
+      <DependentUpon>UpdateCustomer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UpdateProduct.aspx.cs">
       <DependentUpon>UpdateProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

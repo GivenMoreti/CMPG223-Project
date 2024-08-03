@@ -5,7 +5,7 @@
     font-family: 'Cascadia Code';
 }
 
-#Name, #Description, #Size, #Price, #ProductId, #SearchItem {
+#Name, #Description, #Size, #Price, #ProductId, #SearchItem,#CustomerIdTB,#CustomerNameTB,#CustomerEmailTB {
     border-radius: 5px;
     border: 0.2px solid grey;
     margin: 10px;
@@ -13,13 +13,13 @@
     width: 500px;
 }
 
-#AddProductBtn{
-    padding:20px;
-    width:550px;
-    border:none;
-    border-radius:5px;
-    background-color:deepskyblue;
-    color:white;
+#AddProductBtn, #CreateCustomerProfileBtn ,#DeleteCustomerBtn{
+    padding: 20px;
+    width: 550px;
+    border: none;
+    border-radius: 5px;
+    background-color: deepskyblue;
+    color: white;
 }
 
 #SearchBtn{

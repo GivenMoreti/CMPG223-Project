@@ -6,39 +6,40 @@
 <head runat="server">
     <title></title>
 </head>
-        <link rel="stylesheet" href="ProductStyles.css" type="text/css" />
+<link rel="stylesheet" href="ProductStyles.css" type="text/css" />
 <body>
     <form id="form1" runat="server">
         <table style="width: 100%;">
-    <tr>
-        <td style="width: 20%;">&nbsp;</td>
-        <td id="AddLipstickHeading">Update product</td>
-        <td style="width: 20%;">&nbsp;</td>
-    </tr>
-    <tr>
-        <td style="width: 20%;">&nbsp;</td>
-        <td class="content">
-              <asp:TextBox ID="ProductId" runat="server" placeholder="item id"></asp:TextBox><br/>
-              <asp:TextBox ID="Name" runat="server" placeholder="item name"></asp:TextBox><br/>
-              <asp:TextBox ID="Price" runat="server" placeholder="item price"></asp:TextBox> <br/>
-              <asp:TextBox ID="Description" runat="server" placeholder="item description"></asp:TextBox><br/>
-              <asp:TextBox ID="Size" runat="server" placeholder="item size"></asp:TextBox><br/>
-            <asp:Button ID="AddProductBtn" runat="server" Text="Update Lipstick" OnClick="UpdateProductBtn_Click" />
-            <br />
-            <asp:Label ID="FeedbackLbl" runat="server" Text=""></asp:Label><br />
-        </td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td>&nbsp;</td>
-        <td>
+            <tr>
+                <td style="width: 20%;">&nbsp;</td>
+                <td id="AddLipstickHeading">Update product</td>
+                <td style="width: 20%;">&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="width: 20%;">&nbsp;</td>
+                <td class="content">
+                    <asp:TextBox ID="ProductId" runat="server" placeholder="item id"></asp:TextBox><br />
+                    <asp:TextBox ID="Name" runat="server" placeholder="item name"></asp:TextBox><br />
+                    <asp:TextBox ID="Price" runat="server" placeholder="item price"></asp:TextBox>
+                    <br />
+                    <asp:TextBox ID="Description" runat="server" placeholder="item description"></asp:TextBox><br />
+                    <asp:TextBox ID="Size" runat="server" placeholder="item size"></asp:TextBox><br />
+                    <asp:Button ID="AddProductBtn" runat="server" Text="Update Lipstick" OnClick="UpdateProductBtn_Click" />
+                    <br />
+                    <asp:Label ID="FeedbackLbl" runat="server" Text=""></asp:Label><br />
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
 
 
-            <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Products.aspx" runat="server">See products</asp:HyperLink>
-        </td>
-        <td>&nbsp;</td>
-    </tr>
-</table>
+                    <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Products.aspx" runat="server">See products</asp:HyperLink>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
     </form>
 </body>
 </html>

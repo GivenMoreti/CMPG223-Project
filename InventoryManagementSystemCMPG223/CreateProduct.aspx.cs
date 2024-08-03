@@ -95,17 +95,6 @@ namespace InventoryManagementSystemCMPG223
         }
 
 
-       
-
-
-
-      
-
-
-        //DELETE FROM DATABASE
-
-        
-
 
         //VALIDATE FORM INPUT
 

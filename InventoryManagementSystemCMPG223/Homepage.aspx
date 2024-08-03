@@ -16,7 +16,7 @@
             <h3>This part will come from the rest of the group</h3>
             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Products.aspx">Products</asp:HyperLink>
             
-            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Products.aspx">Customers</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Customers.aspx">Customers</asp:HyperLink>
              <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Products.aspx">Inventory</asp:HyperLink>
              <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Products.aspx">Orders</asp:HyperLink>
              <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Products.aspx">Specials</asp:HyperLink>

@@ -34,18 +34,11 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td>
-
-
                         <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Products.aspx" runat="server">See products</asp:HyperLink>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
-            </table>
-          
-          
-
-      
-                
+            </table>                        
         </div>
     </form>
 </body>
