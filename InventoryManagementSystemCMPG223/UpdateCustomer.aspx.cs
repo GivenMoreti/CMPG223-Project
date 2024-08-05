@@ -41,8 +41,6 @@ namespace InventoryManagementSystemCMPG223
             {
                 FeedbackLbl.Text = "Some field(s) are invalid";
             }
-
-           
         }
 
         //UPDATE DATABASE

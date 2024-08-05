@@ -15,10 +15,7 @@ namespace InventoryManagementSystemCMPG223
     public partial class CreateProduct : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-       
-        }
+        {}
 
         //DEPENDENCIES
 
@@ -31,12 +28,7 @@ namespace InventoryManagementSystemCMPG223
         DataSet ds;
 
 
-
         //-----------CUSTOM METHODS------------
-
-
-        //QUERY THE DATABASE
-
         //INSERTION
 
         public void InsertProduct(string query)
@@ -47,6 +39,7 @@ namespace InventoryManagementSystemCMPG223
                 conn.Open();
                 ds = new DataSet();
                 adapter = new SqlDataAdapter();
+
 
                 cmd = new SqlCommand(query, conn);
 
@@ -69,7 +62,7 @@ namespace InventoryManagementSystemCMPG223
 
                 if (countUpdated > 0)
                 {
-                    FeedbackLbl.Text = $"Added product successfully ";
+                    FeedbackLbl.Text = $"Added product successfully";
                     
                     //TAKE USER TO PRODUCTS PAGE
                     Response.Redirect("Products.aspx");
@@ -78,7 +71,6 @@ namespace InventoryManagementSystemCMPG223
                 {
                     FeedbackLbl.Text = $"Failed to add";
                 }
-
             }
             catch (SqlException ex)
             {
@@ -95,7 +87,6 @@ namespace InventoryManagementSystemCMPG223
         }
 
 
-
         //VALIDATE FORM INPUT
 
         public Boolean IsValidForm()
@@ -105,27 +96,21 @@ namespace InventoryManagementSystemCMPG223
         }
 
 
-
         protected void AddProduct_Click(object sender, EventArgs e)
         {
             //add product to database
             try
             {
                     //VALIDATE ENTRY
-
                 if (IsValidForm())
                 {
-         
                     string query = "Insert into producttable(id,name,description,price,size)values(@id,@name,@description,@price,@size)";
-
                     InsertProduct(query);   
-
                 }
                 else
                 {
                     FeedbackLbl.Text = "All the field(s) are required";
                 }
-  
 
             }catch(SqlException ex)
             {
