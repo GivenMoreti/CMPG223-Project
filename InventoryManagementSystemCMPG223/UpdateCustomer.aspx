@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>update customer</title>
       <link rel="stylesheet" href="ProductStyles.css" type="text/css" />
 </head>
 <body>

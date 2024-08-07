@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Homepage.aspx.cs" Inherits="InventoryManagementSystemCMPG223.Homepage" %>
 
+<%@ Register Assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.DataVisualization.Charting" TagPrefix="asp" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -16,13 +18,22 @@
 
             <table style="width: 100%;">
                 <tr>
-                    <td style="width: 20%;">&nbsp;</td>
+                    <td style="width: 20%;">
+                        <h1>SimpliU</h1>
+                    </td>
                     <td id="AddLipstickHeading">
 
                         <asp:TextBox ID="SearchItem" runat="server" placeholder="search"></asp:TextBox>
+                        <asp:Button ID="SearchBtn" runat="server" Text="Search" />
+                       
 
+               
+                       
                     </td>
-                    <td style="width: 20%;">&nbsp;</td>
+                    <td style="width: 20%;">
+                         <asp:Label ID="LblGreet" runat="server" Text=""></asp:Label>
+                        
+                    </td>
 
                 </tr>
                 <tr>
@@ -43,14 +54,24 @@
                             <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Products.aspx">Supplier</asp:HyperLink></div>
                         <div class="div-item"><span class="material-icons">shopping_cart</span>
                             <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Products.aspx">Ordered product</asp:HyperLink></div>
+                         <div class="div-item"><span class="material-icons">logout</span>
+                            <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/LoginPage.aspx">Logout</asp:HyperLink></div>
 
 
                     </td>
 
                     <td class="mid-container">
 
-                        <h3>This part is the landing page with 6 x 2 buttons layout</h3>
 
+                        <div id="productCountContainer">
+                            <asp:Label ID="ProductCountLbl" runat="server" Text=""></asp:Label>
+                        </div>
+
+                        <div id="productCountContainer">
+                            <asp:Label ID="CustomerCountLbl" runat="server" Text=""></asp:Label>
+                        </div>
+
+                        
                     </td>
 
                 </tr>

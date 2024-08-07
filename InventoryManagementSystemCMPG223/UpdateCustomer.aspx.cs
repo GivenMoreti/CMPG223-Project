@@ -34,7 +34,7 @@ namespace InventoryManagementSystemCMPG223
             if (IsValidForm())
             {
                 string keyword = CustomerIdTB.Text;
-                string query = "Update customertable set id=@id,name=@name,email=@emailwhere id=@id";
+                string query = "Update customertable set id=@id,name=@name,email=@email where id=@id";
                 UpdateACustomer(query, keyword);
             }
             else
@@ -68,6 +68,7 @@ namespace InventoryManagementSystemCMPG223
                 adapter.UpdateCommand = cmd;
 
                 int countUpdated = adapter.UpdateCommand.ExecuteNonQuery();
+
                 if (countUpdated > 0)
                 {
                     FeedbackLbl.Text = $"Successfully updated {keyword}";

@@ -5,29 +5,33 @@
     font-family: 'Cascadia Code';
 }
 
-.sidebar{
-    background-color:mintcream;
-}
-.mid-container {
+.sidebar {
     background-color: mintcream;
 }
+
+.mid-container {
+    background-color: mintcream;
+    background-color: ghostwhite;
+}
+
 body {
     background-color: deepskyblue;
+    background-color: ghostwhite;
 }
 
-.div-item{
-   
-    display:flex;
-    flex-direction:row;
-    align-content:center;
-}
-.material-icons{
-    padding:30px;
-    font-size:20px;
-    opacity:0.7;
+.div-item {
+    display: flex;
+    flex-direction: row;
+  align-items:center;
 }
 
-#Name,#Description, #Size, #Price, #ProductId, #SearchItem, #CustomerIdTB, #CustomerNameTB, #CustomerEmailTB {
+.material-icons {
+    padding: 30px;
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+#Name, #Description, #Size, #Price, #ProductId, #SearchItem, #CustomerIdTB, #CustomerNameTB, #CustomerEmailTB, #Username, #UserPassword, #UserId {
     border-radius: 5px;
     border: 0.2px solid grey;
     margin: 10px;
@@ -35,7 +39,7 @@ body {
     width: 500px;
 }
 
-#AddProductBtn, #CreateCustomerProfileBtn ,#DeleteCustomerBtn{
+#AddProductBtn, #CreateCustomerProfileBtn, #DeleteCustomerBtn, #SignInBtn, #SignUpBtn {
     padding: 20px;
     width: 550px;
     border: 1px solid white;
@@ -44,67 +48,127 @@ body {
     color: white;
 }
 
-#SearchBtn{
+#SearchBtn {
     padding: 20px;
     width: 100px;
-    border: none;
+    border: 1px solid white;
     border-radius: 5px;
     background-color: deepskyblue;
     color: white;
-    height:60px;
+    height: 60px;
 }
 
 
-#SearchBtn:hover{
-    padding: 20px;
-    width: 100px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color:white;
-    color: black;
-}
+    #SearchBtn:hover {
+        padding: 20px;
+        width: 100px;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: white;
+        color: black;
+    }
 
 .content {
     align-content: center;
     align-items: center;
     margin-left: 200px;
+    border: 1px solid red;
 }
 
-#AddLipstickHeading{
-    font-size:30px;
-    text-align:center;
-}
-#ProductsGridView{
-   padding:20px;
-   margin:10px;
-   height:100px;
+#AddLipstickHeading {
+    font-size: 30px;
+    text-align: center;
 }
 
-#HyperLink5, #HyperLink6, #HyperLink7, #HyperLink8,#HyperLink1,#HyperLink2,#HyperLink3,#HyperLink4 {
+#ProductsGridView {
+    padding: 20px;
+    margin: 10px;
+    height: 100px;
+}
+
+#HyperLink5, #HyperLink6, #HyperLink7, #HyperLink8, #HyperLink1, #HyperLink2, #HyperLink3, #HyperLink4, #HyperLink8 {
     text-decoration: none;
     font-size: 14px;
     color: black;
     margin: 20px;
-    display:flex;
-    flex-direction:column;
-    height:50px;
+    display: flex;
+    flex-direction: column;
+    height: 25px;
 }
-.sidebar{
-    height:300px;
-    margin:10px;
+
+.sidebar {
+    height: 200px;
+    margin: 10px;
 }
 
 
-#HyperLink5:hover, #HyperLink6:hover, #HyperLink7:hover, #HyperLink8:hover, #HyperLink1:hover, #HyperLink2:hover, #HyperLink3:hover, #HyperLink4:hover {
+#HyperLink5:hover, #HyperLink6:hover, #HyperLink7:hover, #HyperLink8:hover, #HyperLink1:hover, #HyperLink2:hover, #HyperLink3:hover, #HyperLink4:hover, #HyperLink8:hover {
     text-decoration-line: underline;
     text-underline-offset: 10px;
     text-decoration-color: skyblue;
     text-decoration-thickness: 2px;
 }
 
-#AddLipstickHeading{
-    display:flex;
-    flex-direction:row;
-    align-content:center;
-    align-items:center;
+#AddLipstickHeading {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+#productCountContainer {
+    background-color: dimgrey;
+    padding: 60px;
+    width: 100px;
+    text-align: center;
+    height: 100px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+}
+
+#ProductCountLbl, #CustomerCountLbl {
+    font-size: 20px;
+    color: white;
+}
+
+#LblGreet {
+    float: right;
+    font-size: 14px;
+    padding: 20px;
+}
+
+.HaveAccountContainer {
+    display: flex;
+    flex-direction: row; 
+    margin:20px;
+    align-items: center;
+}
+
+#HaveAccountText{
+    opacity:0.7;
+}
+#LoginLbl {
+    text-align: center;
+    text-decoration:none;
+    padding:10px;
+    color:black;
+    
+}
+
+#signUpHeading {
+    text-align: center;
+}
+
+#productHeading {
+    text-align: center;
+    font-weight: 500;
+    opacity: 0.8;
+}
+#CustomerGridView, #ProductsGridView {
+    width: 80%;
+    height: 40%;
 }
