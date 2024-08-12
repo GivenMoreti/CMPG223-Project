@@ -18,12 +18,23 @@
             <tr>
                 <td style="width: 20%;">&nbsp;</td>
                 <td class="content">
+
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ProductId" ErrorMessage="*"></asp:RequiredFieldValidator>
                     <asp:TextBox ID="ProductId" runat="server" placeholder="item id"></asp:TextBox><br />
+
+                    <asp:RequiredFieldValidator ControlToValidate="Name" ID="RequiredFieldValidator2" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
                     <asp:TextBox ID="Name" runat="server" placeholder="item name"></asp:TextBox><br />
+
+                    <asp:RequiredFieldValidator ControlToValidate="Price" ID="RequiredFieldValidator3" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
                     <asp:TextBox ID="Price" runat="server" placeholder="item price"></asp:TextBox>
                     <br />
+
+                    <asp:RequiredFieldValidator ControlToValidate="Description" ID="RequiredFieldValidator4" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
                     <asp:TextBox ID="Description" runat="server" placeholder="item description"></asp:TextBox><br />
+
+                    <asp:RequiredFieldValidator ControlToValidate="Size" ID="RequiredFieldValidator5" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
                     <asp:TextBox ID="Size" runat="server" placeholder="item size"></asp:TextBox><br />
+
                     <asp:Button ID="AddProductBtn" runat="server" Text="Update Lipstick" OnClick="UpdateProductBtn_Click" />
                     <br />
                     <asp:Label ID="FeedbackLbl" runat="server" Text=""></asp:Label><br />

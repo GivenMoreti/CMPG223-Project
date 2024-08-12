@@ -20,10 +20,15 @@
                 <tr>
                     <td style="width: 20%;">&nbsp;</td>
                     <td class="content">
-                        <asp:TextBox ID="CustomerIdTB" runat="server" placeholder="Customer id"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="CustomerIdTB" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
+                        <asp:TextBox ID="CustomerIdTB" runat="server"   placeholder="Customer id"></asp:TextBox>
                         <br />
-                        <asp:TextBox ID="CustomerNameTB" runat="server" placeholder="Customer name"></asp:TextBox><br />
-                        <asp:TextBox ID="CustomerEmailTB" runat="server" placeholder="Customer Email"></asp:TextBox><br />
+                        
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="CustomerNameTB" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
+                        <asp:TextBox ID="CustomerNameTB" runat="server"  placeholder="Customer name"></asp:TextBox><br />
+                        
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="CustomerEmailTB" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
+                        <asp:TextBox ID="CustomerEmailTB" runat="server"  placeholder="Customer Email"></asp:TextBox><br />
 
                         <asp:Button ID="CreateCustomerProfileBtn" runat="server" Text="Create Profile" OnClick="CreateCustomerProfileBtn_Click" />
                     </td>

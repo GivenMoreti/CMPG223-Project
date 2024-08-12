@@ -22,7 +22,7 @@ body {
 .div-item {
     display: flex;
     flex-direction: row;
-  align-items:center;
+    align-items:center;
 }
 
 .material-icons {
@@ -31,21 +31,24 @@ body {
     opacity: 0.7;
 }
 
-#Name, #Description, #Size, #Price, #ProductId, #SearchItem, #CustomerIdTB, #CustomerNameTB, #CustomerEmailTB, #Username, #UserPassword, #UserId {
+#Name,#Description, #Size, #Price, #ProductId, #SearchItem, #CustomerIdTB, #CustomerNameTB, #CustomerEmailTB, #Username, #UserPassword, #UserId {
     border-radius: 5px;
-    border: 0.2px solid grey;
-    margin: 10px;
+    border: 0px;
+    margin: 5px;
     padding: 20px;
-    width: 500px;
+    width: 100%;
+   
 }
 
-#AddProductBtn, #CreateCustomerProfileBtn, #DeleteCustomerBtn, #SignInBtn, #SignUpBtn {
-    padding: 20px;
-    width: 550px;
+#AddProductBtn, #CreateCustomerProfileBtn, #DeleteCustomerBtn, #SignInBtn, #SignUpBtn,#UpdateCustomerBtn {
+    padding: 30px;
+    width: 104%;
     border: 1px solid white;
     border-radius: 5px;
     background-color: deepskyblue;
     color: white;
+    font-size:16px;
+    margin:10px;
 }
 
 #SearchBtn {
@@ -58,21 +61,19 @@ body {
     height: 60px;
 }
 
-
-    #SearchBtn:hover {
-        padding: 20px;
-        width: 100px;
-        border: 1px solid black;
-        border-radius: 5px;
-        background-color: white;
-        color: black;
-    }
+#SearchBtn:hover {
+    padding: 20px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
 
 .content {
     align-content: center;
     align-items: center;
-    margin-left: 200px;
-    border: 1px solid red;
+    padding:10px;
 }
 
 #AddLipstickHeading {
@@ -110,10 +111,11 @@ body {
 }
 
 #AddLipstickHeading {
-    display: flex;
-    flex-direction: row;
+   
+    margin:20px;
     align-content: center;
     align-items: center;
+    text-align:center;
 }
 
 #productCountContainer {
@@ -146,17 +148,18 @@ body {
     flex-direction: row; 
     margin:20px;
     align-items: center;
+    text-align:center;
 }
 
 #HaveAccountText{
     opacity:0.7;
+    text-align:center;
 }
 #LoginLbl {
     text-align: center;
     text-decoration:none;
     padding:10px;
-    color:black;
-    
+    color:black;  
 }
 
 #signUpHeading {
@@ -171,4 +174,14 @@ body {
 #CustomerGridView, #ProductsGridView {
     width: 80%;
     height: 40%;
+}
+
+.headerItems{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+
+#FeedbackLbl{
+    text-align:center;
 }

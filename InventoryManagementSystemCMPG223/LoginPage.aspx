@@ -22,23 +22,26 @@
                     <td style="width: 20%;">&nbsp;</td>
                     <td class="content">
 
+
                         <asp:TextBox ID="Username" runat="server" placeholder="Enter your name"></asp:TextBox><br />
-                        <asp:TextBox ID="UserPassword" runat="server" placeholder="Enter your password"></asp:TextBox><br />
+
+
+                        <asp:TextBox ID="UserPassword" type="password" runat="server" placeholder="Enter your password"></asp:TextBox><br />
 
                         <asp:Button ID="SignInBtn" runat="server" Text="Sign in" OnClick="SignInBtn_Click" />
+
+                        <div class="HaveAccountContainer">
+                            <p id="haveAccountText">Don't have account?</p>
+                            <asp:HyperLink ID="LoginLbl" runat="server" NavigateUrl="~/SignUpPage.aspx">Sign up</asp:HyperLink>
+                        </div>
+                        <asp:Label ID="LblDisplay" runat="server" Text=""></asp:Label>
 
                     </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
-                    <td>
-                        <div class="HaveAccountContainer">
-                            <p id="haveAccountText">Don't have account?</p>
-                            <asp:HyperLink ID="LoginLbl" runat="server" NavigateUrl="~/SignUpPage.aspx">Sign up</asp:HyperLink>
-                        </div>
-                        <asp:Label ID="LblDisplay" runat="server" Text=""></asp:Label>
-                    </td>
+                    <td></td>
                     <td>&nbsp;</td>
                 </tr>
             </table>

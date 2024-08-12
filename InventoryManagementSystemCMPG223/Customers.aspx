@@ -15,10 +15,12 @@
             <table style="width: 100%;">
                 <tr>
                     <td style="width: 20%;">&nbsp;</td>
-                    <td id="AddLipstickHeading">
-
-                        <asp:TextBox ID="SearchItem" runat="server" placeholder="search"></asp:TextBox>
-                        <asp:Button ID="SearchBtn" runat="server" Text="Search" OnClick="SearchBtn_Click1" />
+                    <td >
+                        <div class="headerItems">
+                            <asp:TextBox ID="SearchItem" runat="server" placeholder="search"></asp:TextBox>
+                            <asp:Button ID="SearchBtn" runat="server" Text="Search" OnClick="SearchBtn_Click1" />
+                    
+                       </div>
                     </td>
                     <td style="width: 20%;">&nbsp;</td>
 

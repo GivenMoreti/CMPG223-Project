@@ -22,8 +22,14 @@
                     <td>&nbsp;</td>
                     <td class="content">
 
+                        <asp:RequiredFieldValidator ControlToValidate="UserId" ID="RequiredFieldValidator1" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
                         <asp:TextBox ID="UserId" runat="server" placeholder="Enter your id"></asp:TextBox><br />
+                        
+                        <asp:RequiredFieldValidator ControlToValidate="Username" ID="RequiredFieldValidator2" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
                         <asp:TextBox ID="Username" runat="server" placeholder="Enter your name"></asp:TextBox><br />
+                        
+                        
+                        <asp:RequiredFieldValidator ControlToValidate="UserPassword"  ID="RequiredFieldValidator3" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
                         <asp:TextBox ID="UserPassword" runat="server" placeholder="Enter your password"></asp:TextBox><br />
 
                         <asp:Button ID="SignUpBtn" runat="server" Text="Create Account" OnClick="SignUpBtn_Click" />
