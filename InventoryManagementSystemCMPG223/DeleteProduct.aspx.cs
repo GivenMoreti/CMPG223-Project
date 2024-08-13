@@ -19,13 +19,13 @@ namespace InventoryManagementSystemCMPG223
 
         //DEPENDENCIES
 
-        string ConnString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\InventoryManagementSystemDB.mdf;Integrated Security=True";
-
-        //readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManagementSystemDB;Integrated Security=True;Trust Server Certificate=True";
+        readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManSysDB;Integrated Security=True;TrustServerCertificate=True";
         SqlConnection conn;
         SqlDataAdapter adapter;
         SqlCommand cmd;
         DataSet ds;
+
+
 
 
         public void DeleteAProduct(string query,int Id)
@@ -37,6 +37,8 @@ namespace InventoryManagementSystemCMPG223
                 conn.Open();
 
                 cmd = new SqlCommand(query, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
                 cmd.Parameters.AddWithValue("@Id", Id);
 
                 adapter.DeleteCommand = cmd;
@@ -72,7 +74,7 @@ namespace InventoryManagementSystemCMPG223
         protected void DeleteProducts(object sender, EventArgs e)
         {
          
-            string query = "Delete from producttable where id=@id";
+            string query = "DeleteProduct";
 
             if (int.TryParse(ProductId.Text,out int id))
             {

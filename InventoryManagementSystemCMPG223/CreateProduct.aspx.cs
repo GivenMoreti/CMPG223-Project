@@ -19,14 +19,11 @@ namespace InventoryManagementSystemCMPG223
 
         //DEPENDENCIES
 
-        string ConnString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\InventoryManagementSystemDB.mdf;Integrated Security=True";
-
-        //readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManagementSystemDB;Integrated Security=True;Trust Server Certificate=True";
+        readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManSysDB;Integrated Security=True;TrustServerCertificate=True";
         SqlConnection conn;
         SqlDataAdapter adapter;
         SqlCommand cmd;
         DataSet ds;
-
 
         //-----------CUSTOM METHODS------------
         //INSERTION
@@ -43,33 +40,36 @@ namespace InventoryManagementSystemCMPG223
 
                 cmd = new SqlCommand(query, conn);
 
+                cmd.CommandType = CommandType.StoredProcedure;
+
                 //GET PRODUCT DETAILS FROM THE FORM
-                int id = Int32.Parse(ProductId.Text);
-                string name = Name.Text, description = Description.Text;
-                double price = Double.Parse(Price.Text), size = Double.Parse(Size.Text);
+                
+                string ProductName = Name.Text;
+                string ProductDescription = Description.Text;
+                double Price = Double.Parse(Price1.Text);
+                double ProductSize = Double.Parse(Size.Text);
 
 
-                //parameters
-                cmd.Parameters.AddWithValue("@id", id);
-                cmd.Parameters.AddWithValue("@name", name);
-                cmd.Parameters.AddWithValue("@description", description);
-                cmd.Parameters.AddWithValue("@size", size);
-                cmd.Parameters.AddWithValue("@price", price);
+                // Add parameters to the command
+                cmd.Parameters.AddWithValue("@ProductName", ProductName);
+                cmd.Parameters.AddWithValue("@ProductDescription", ProductDescription);
+                cmd.Parameters.AddWithValue("@ProductSize", ProductSize);
+                cmd.Parameters.AddWithValue("@Price", Price);
+              
 
-                adapter.InsertCommand = cmd;
 
-                int countUpdated = adapter.InsertCommand.ExecuteNonQuery();
+                // Execute the stored procedure
+                int countUpdated = cmd.ExecuteNonQuery();
 
                 if (countUpdated > 0)
                 {
-                    FeedbackLbl.Text = $"Added product successfully";
-                    
+                    FeedbackLbl.Text = "Added product successfully";
                     //TAKE USER TO PRODUCTS PAGE
                     Response.Redirect("Products.aspx");
                 }
                 else
                 {
-                    FeedbackLbl.Text = $"Failed to add";
+                    FeedbackLbl.Text = "Failed to add";
                 }
             }
             catch (SqlException ex)
@@ -91,7 +91,7 @@ namespace InventoryManagementSystemCMPG223
 
         public Boolean IsValidForm()
         {
-            return !string.IsNullOrEmpty(ProductId.Text)&&!string.IsNullOrEmpty(Name.Text) && !string.IsNullOrEmpty(Price.Text) && 
+            return !string.IsNullOrEmpty(Name.Text) && !string.IsNullOrEmpty(Price1.Text) && 
                 !string.IsNullOrEmpty(Description.Text) && !string.IsNullOrEmpty(Size.Text);
         }
 
@@ -104,7 +104,8 @@ namespace InventoryManagementSystemCMPG223
                     //VALIDATE ENTRY
                 if (IsValidForm())
                 {
-                    string query = "Insert into producttable(id,name,description,price,size)values(@id,@name,@description,@price,@size)";
+                    // string query = "Insert into producttable(id,name,description,price,size)values(@id,@name,@description,@price,@size)";
+                    string query = "InsertProduct";
                     InsertProduct(query);   
                 }
                 else
@@ -112,17 +113,11 @@ namespace InventoryManagementSystemCMPG223
                     FeedbackLbl.Text = "All the field(s) are required";
                 }
 
-            }catch(SqlException ex)
-            {
-                ex.ToString();
             }catch(Exception ex)
             {
                 ex.ToString();
             }
-            finally
-            {
-                conn.Close();
-            }
+            
                 
         }
     }

@@ -18,15 +18,13 @@ namespace InventoryManagementSystemCMPG223
 
         //DEPENDENCIES
 
-        //string ConnString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\InventoryManagementSystemDB.mdf;Integrated Security=True";
-
-        readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManagementSystemDB;Integrated Security=True;Trust Server Certificate=True";
+        readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManSysDB;Integrated Security=True;TrustServerCertificate=True";
         SqlConnection conn;
         SqlDataAdapter adapter;
         SqlCommand cmd;
         DataSet ds;
 
-
+   
 
         //UPDATE DATABASE
         public void UpdateAProduct(string query, string keyword)
@@ -39,16 +37,17 @@ namespace InventoryManagementSystemCMPG223
 
                 //GET PRODUCT DETAILS FROM THE FORM
                 int id = Int32.Parse(ProductId.Text);
-                string name = Name.Text, description = Description.Text;
-                double price = Double.Parse(Price.Text), size = Double.Parse(Size.Text);
+                string ProductName = Name.Text, ProductDescription = Description.Text;
+                double price = Double.Parse(Price.Text), ProductSize = Double.Parse(Size.Text);
                 
                 cmd = new SqlCommand(query, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
 
                 //parameters
                 cmd.Parameters.AddWithValue("@id", id);
-                cmd.Parameters.AddWithValue("@name", name);
-                cmd.Parameters.AddWithValue("@description", description);
-                cmd.Parameters.AddWithValue("@size", size);
+                cmd.Parameters.AddWithValue("@ProductName", ProductName);
+                cmd.Parameters.AddWithValue("@ProductDescription", ProductDescription);
+                cmd.Parameters.AddWithValue("@ProductSize", ProductSize);
                 cmd.Parameters.AddWithValue("@price", price);
 
 
@@ -82,7 +81,7 @@ namespace InventoryManagementSystemCMPG223
         protected void UpdateProductBtn_Click(object sender, EventArgs e)
         {
             string keyword = ProductId.Text;
-            string query = "Update producttable set id=@id,name=@name,description=@description,price=@price,size=@size where id=@id";
+            string query = "UpdateProduct";
             UpdateAProduct(query, keyword);
         }
     }

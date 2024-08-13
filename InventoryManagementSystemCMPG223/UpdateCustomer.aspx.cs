@@ -21,11 +21,11 @@ namespace InventoryManagementSystemCMPG223
 
         //DEPENDENCIES
 
-        string ConnString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\InventoryManagementSystemDB.mdf;Integrated Security=True";
-        //readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManagementSystemDB;Integrated Security=True;Trust Server Certificate=True";
+        readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManSysDB;Integrated Security=True;TrustServerCertificate=True";
         SqlConnection conn;
         SqlDataAdapter adapter;
         SqlCommand cmd;
+
 
 
 
@@ -34,7 +34,7 @@ namespace InventoryManagementSystemCMPG223
             if (IsValidForm())
             {
                 string keyword = CustomerIdTB.Text;
-                string query = "Update customertable set id=@id,name=@name,email=@email where id=@id";
+                string query = "UpdateCustomer";
                 UpdateACustomer(query, keyword);
             }
             else
@@ -53,16 +53,17 @@ namespace InventoryManagementSystemCMPG223
                 conn.Open();
 
                 //GET CUSTOMER DETAILS FROM THE FORM
-                int id = Int32.Parse(CustomerIdTB.Text);
-                string name = CustomerNameTB.Text, email = CustomerEmailTB.Text;
+                int Id = Int32.Parse(CustomerIdTB.Text);
+                string Name = CustomerNameTB.Text, Email = CustomerEmailTB.Text;
                
 
                 cmd = new SqlCommand(query, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
 
                 //parameters
-                cmd.Parameters.AddWithValue("@id", id);
-                cmd.Parameters.AddWithValue("@name", name);
-                cmd.Parameters.AddWithValue("@email", email);
+                cmd.Parameters.AddWithValue("@Id", Id);
+                cmd.Parameters.AddWithValue("@Name", Name);
+                cmd.Parameters.AddWithValue("@Email", Email);
              
 
                 adapter.UpdateCommand = cmd;

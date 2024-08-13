@@ -21,7 +21,7 @@ namespace InventoryManagementSystemCMPG223
         SqlConnection conn;
         SqlDataAdapter adapter;
         SqlCommand cmd;
-        DataSet ds;
+      
         protected void SignUpBtn_Click(object sender, EventArgs e)
         {
             try

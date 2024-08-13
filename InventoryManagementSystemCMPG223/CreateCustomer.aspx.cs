@@ -21,9 +21,7 @@ namespace InventoryManagementSystemCMPG223
 
         //DEPENDENCIES
 
-        string ConnString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\InventoryManagementSystemDB.mdf;Integrated Security=True";
-
-        //readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManagementSystemDB;Integrated Security=True;Trust Server Certificate=True";
+        readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManSysDB;Integrated Security=True;TrustServerCertificate=True";
         SqlConnection conn;
         SqlDataAdapter adapter;
         SqlCommand cmd;
@@ -33,7 +31,7 @@ namespace InventoryManagementSystemCMPG223
         {
             if (IsValidForm())
             {
-                InsertCustomer("Insert into customertable(id,email,name)values(@id,@email,@name)");
+                InsertCustomer("InsertCustomer");
 
             }
             else
@@ -57,16 +55,17 @@ namespace InventoryManagementSystemCMPG223
                 adapter = new SqlDataAdapter();
 
                 cmd = new SqlCommand(query, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
 
                 //GET CUSTOMER DETAILS FROM THE FORM
-                int id = Int32.Parse(CustomerIdTB.Text);
-                string name = CustomerNameTB.Text, email = CustomerEmailTB.Text;
+   
+                string Name = CustomerNameTB.Text, Email = CustomerEmailTB.Text;
                
 
                 //parameters
-                cmd.Parameters.AddWithValue("@id", id);
-                cmd.Parameters.AddWithValue("@name", name);
-                cmd.Parameters.AddWithValue("@email", email);
+          
+                cmd.Parameters.AddWithValue("@Name", Name);
+                cmd.Parameters.AddWithValue("@Email", Email);
           
                 adapter.InsertCommand = cmd;
 
@@ -103,7 +102,7 @@ namespace InventoryManagementSystemCMPG223
 
         public Boolean IsValidForm()
         {
-            return !string.IsNullOrEmpty(CustomerIdTB.Text) && !string.IsNullOrEmpty(CustomerNameTB.Text) && !string.IsNullOrEmpty(CustomerEmailTB.Text);
+            return !string.IsNullOrEmpty(CustomerNameTB.Text) && !string.IsNullOrEmpty(CustomerEmailTB.Text);
                
         }
 

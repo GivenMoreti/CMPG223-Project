@@ -16,8 +16,8 @@ namespace InventoryManagementSystemCMPG223
 
         //DEPENDENCIES
 
-        string ConnString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\InventoryManagementSystemDB.mdf;Integrated Security=True";
-        //readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManagementSystemDB;Integrated Security=True;Trust Server Certificate=True";
+        //string ConnString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\InventoryManagementSystemDB.mdf;Integrated Security=True";
+        readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManSysDB;Integrated Security=True;TrustServerCertificate=True";
         SqlConnection conn;
         SqlDataAdapter adapter;
         SqlCommand cmd;
@@ -29,8 +29,8 @@ namespace InventoryManagementSystemCMPG223
             //IF NOT POSTBACK
             if (!IsPostBack)
             {
-               GetProducts("SELECT * FROM producttable");
-                //GetProducts("select * from producttable");
+              // GetProducts("SELECT * FROM producttable");
+                GetProducts();
 
             }
         }
@@ -41,6 +41,43 @@ namespace InventoryManagementSystemCMPG223
 
         //RETRIEVALS
         //generic search
+
+        public void GetProducts()
+        {
+            try
+            {
+                conn = new SqlConnection(ConnString);
+                adapter = new SqlDataAdapter();
+                ds = new DataSet();
+                conn.Open();
+
+                cmd = new SqlCommand("SelectAllProducts", conn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                adapter.SelectCommand = cmd;
+                adapter.Fill(ds);
+
+                ProductsGridView.DataSource = ds;
+                ProductsGridView.DataBind();
+            }
+            catch (SqlException ex)
+            {
+                FeedbackLbl.Text = ex.ToString();
+            }
+            catch (Exception e)
+            {
+                FeedbackLbl.Text = e.ToString();
+            }
+            finally
+            {
+                conn.Close();
+            }
+            
+        }
+
+
         public void GetProducts(string query)
         {
             try
@@ -75,6 +112,7 @@ namespace InventoryManagementSystemCMPG223
             }
         }
 
+        /*
         //query specify get by id,*, or other args
         public void GetProducts(string query, string searchKey)
             {
@@ -113,9 +151,10 @@ namespace InventoryManagementSystemCMPG223
             }
 
  
-
+        */
         protected void SearchBtn_Click(object sender, EventArgs e)
         {
+           /*
             string searchKey = SearchItem.Text;
             string query ="select * from producttable where name like @searchKey or description like @searchKey or price like @searchKey or size like @searchKey";
 
@@ -129,7 +168,10 @@ namespace InventoryManagementSystemCMPG223
                 FeedbackLbl.Text = "search box empty";
                 GetProducts("select * from producttable");
             }
+
+            */
             
         }
+        
     }
 }

@@ -26,14 +26,13 @@
                     <td style="width: 20%;">&nbsp;</td>
                     <td class="content">
 
-                        <asp:RequiredFieldValidator ControlToValidate="ProductId" ID="RequiredFieldValidator1" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
-                        <asp:TextBox ID="ProductId" runat="server" placeholder="item id"></asp:TextBox><br />
+                       
 
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="Name" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
                         <asp:TextBox ID="Name" runat="server" placeholder="item name"></asp:TextBox><br />
 
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="Price" ErrorMessage="*"></asp:RequiredFieldValidator>
-                        <asp:TextBox ID="Price" runat="server" placeholder="item price"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="Price1" ErrorMessage="*"></asp:RequiredFieldValidator>
+                        <asp:TextBox ID="Price1" runat="server" placeholder="item price"></asp:TextBox>
                         <br />
 
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="Description" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
@@ -42,6 +41,8 @@
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ControlToValidate="Size" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
                         <asp:TextBox ID="Size" runat="server" placeholder="item size"></asp:TextBox><br />
 
+
+                       
                         <asp:Button ID="AddProductBtn" runat="server" Text="Add Lipstick" OnClick="AddProduct_Click" />
                         <br />
                         <asp:Label ID="FeedbackLbl" runat="server" Text=""></asp:Label><br />

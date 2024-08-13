@@ -57,27 +57,8 @@
                         </div>
 
                         <asp:GridView ID="ProductsGridView" runat="server" CellSpacing="2" AllowSorting="True" AllowPaging="True" PagerSettings-Mode="Numeric" PageSize="15"></asp:GridView>
-                        <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString="<%$ ConnectionStrings:InventoryManagementSystemDBConnectionString %>" DeleteCommand="DELETE FROM [Products] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Products] ([Id], [ProductName], [Price], [ProductDescription], [ProductSize], [InventoryId]) VALUES (@Id, @ProductName, @Price, @ProductDescription, @ProductSize, @InventoryId)" SelectCommand="SELECT * FROM [Products]" UpdateCommand="UPDATE [Products] SET [ProductName] = @ProductName, [Price] = @Price, [ProductDescription] = @ProductDescription, [ProductSize] = @ProductSize, [InventoryId] = @InventoryId WHERE [Id] = @Id">
-                            <DeleteParameters>
-                                <asp:Parameter Name="Id" Type="Int32"></asp:Parameter>
-                            </DeleteParameters>
-                            <InsertParameters>
-                                <asp:Parameter Name="Id" Type="Int32"></asp:Parameter>
-                                <asp:Parameter Name="ProductName" Type="String"></asp:Parameter>
-                                <asp:Parameter Name="Price" Type="Decimal"></asp:Parameter>
-                                <asp:Parameter Name="ProductDescription" Type="String"></asp:Parameter>
-                                <asp:Parameter Name="ProductSize" Type="Decimal"></asp:Parameter>
-                                <asp:Parameter Name="InventoryId" Type="Int32"></asp:Parameter>
-                            </InsertParameters>
-                            <UpdateParameters>
-                                <asp:Parameter Name="ProductName" Type="String"></asp:Parameter>
-                                <asp:Parameter Name="Price" Type="Decimal"></asp:Parameter>
-                                <asp:Parameter Name="ProductDescription" Type="String"></asp:Parameter>
-                                <asp:Parameter Name="ProductSize" Type="Decimal"></asp:Parameter>
-                                <asp:Parameter Name="InventoryId" Type="Int32"></asp:Parameter>
-                                <asp:Parameter Name="Id" Type="Int32"></asp:Parameter>
-                            </UpdateParameters>
-                        </asp:SqlDataSource>
+                       
+                       
                     </td>
                     <td>&nbsp;</td>
                 </tr>

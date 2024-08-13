@@ -17,14 +17,13 @@ namespace InventoryManagementSystemCMPG223
         }
 
 
-        string ConnString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\InventoryManagementSystemDB.mdf;Integrated Security=True";
-
-        //readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManagementSystemDB;Integrated Security=True;Trust Server Certificate=True";
+        readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManSysDB;Integrated Security=True;TrustServerCertificate=True";
         SqlConnection conn;
         SqlDataAdapter adapter;
         SqlCommand cmd;
+        DataSet ds;
 
-       
+
 
         public void DeleteACustomer(string query, int Id)
         {
@@ -35,6 +34,7 @@ namespace InventoryManagementSystemCMPG223
                 conn.Open();
 
                 cmd = new SqlCommand(query, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Id", Id);
 
                 adapter.DeleteCommand = cmd;
@@ -75,7 +75,7 @@ namespace InventoryManagementSystemCMPG223
         {
             if (IsValidId())
             {
-                string query = "Delete from customertable where id=@id";
+                string query = "DeleteCustomer";
 
                 if (int.TryParse(CustomerIdTB.Text, out int id))
                 {

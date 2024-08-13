@@ -31,7 +31,7 @@ body {
     opacity: 0.7;
 }
 
-#Name,#Description, #Size, #Price, #ProductId, #SearchItem, #CustomerIdTB, #CustomerNameTB, #CustomerEmailTB, #Username, #UserPassword, #UserId {
+#Name,#Description, #Size, #Price1, #ProductId, #SearchItem, #CustomerIdTB, #CustomerNameTB, #CustomerEmailTB, #Username, #UserPassword, #UserId {
     border-radius: 5px;
     border: 0px;
     margin: 5px;

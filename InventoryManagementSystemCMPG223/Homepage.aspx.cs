@@ -16,11 +16,11 @@ namespace InventoryManagementSystemCMPG223
             if (!IsPostBack)
             {
                //assign lables to the main dashboard
-                int productCount = GetCount("SELECT COUNT(*) FROM producttable");
+                int productCount = GetCount("CountProducts");
                 ProductCountLbl.Text = productCount.ToString() + " Products";
 
-                int customerCount = GetCount("Select count(*) from customertable");
-                CustomerCountLbl.Text = customerCount.ToString() +  " Customers";
+               int customerCount = GetCount("CountCustomers");
+               CustomerCountLbl.Text = customerCount.ToString() +  " Customers";
 
                 //ADD COUNTS FOR OTHER ENTITIES HERE
 
@@ -43,8 +43,7 @@ namespace InventoryManagementSystemCMPG223
 
         //DEPENDENCIES
 
-        string ConnString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\InventoryManagementSystemDB.mdf;Integrated Security=True";
-        //readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManagementSystemDB;Integrated Security=True;Trust Server Certificate=True";
+        readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManSysDB;Integrated Security=True;TrustServerCertificate=True";
         SqlConnection conn;
         SqlDataAdapter adapter;
         SqlCommand cmd;
@@ -61,15 +60,13 @@ namespace InventoryManagementSystemCMPG223
                 conn.Open();
 
                 cmd = new SqlCommand(query, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
 
 
                 adapter.SelectCommand = cmd;
                 adapter.Fill(ds);
 
                 count = (int)cmd.ExecuteScalar();
-
-
-
 
             }
             catch (SqlException ex)

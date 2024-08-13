@@ -16,19 +16,19 @@ namespace InventoryManagementSystemCMPG223
         
             if (!IsPostBack)
             {
-                GetCustomers("SELECT * FROM customertable");
+                GetCustomers("SelectAllCustomers");
      
             }
         }
 
         //DEPENDENCIES
 
-        string ConnString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\InventoryManagementSystemDB.mdf;Integrated Security=True";
-        //readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManagementSystemDB;Integrated Security=True;Trust Server Certificate=True";
+        readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManSysDB;Integrated Security=True;TrustServerCertificate=True";
         SqlConnection conn;
         SqlDataAdapter adapter;
         SqlCommand cmd;
         DataSet ds;
+
 
         public void GetCustomers(string query)
         {
@@ -40,6 +40,7 @@ namespace InventoryManagementSystemCMPG223
                 conn.Open();
 
                 cmd = new SqlCommand(query, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
 
 
                 adapter.SelectCommand = cmd;
@@ -119,7 +120,7 @@ namespace InventoryManagementSystemCMPG223
                 //  WHEN THE SEARCHBOX IS EMPTY RETRIEVE DATA
 
                 FeedbackLbl.Text = "search box empty";
-                GetCustomers("select * from customertable");
+                GetCustomers("SelectAllCustomers");
             }
         }
     }
