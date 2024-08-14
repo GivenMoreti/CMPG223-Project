@@ -16,12 +16,14 @@ namespace InventoryManagementSystemCMPG223
 
         }
 
-        string ConnString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\InventoryManagementSystemDB.mdf;Integrated Security=True";
-        //readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManagementSystemDB;Integrated Security=True;Trust Server Certificate=True";
+        //DEPENDENCIES
+        readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManSysDB;Integrated Security=True;TrustServerCertificate=True";
         SqlConnection conn;
         SqlDataAdapter adapter;
         SqlCommand cmd;
-      
+     
+
+
         protected void SignUpBtn_Click(object sender, EventArgs e)
         {
             try
@@ -30,27 +32,28 @@ namespace InventoryManagementSystemCMPG223
                 {
 
                     //get user data
-                    string username = Username.Text, password = UserPassword.Text; 
-                    int Id = Int32.Parse(UserId.Text);
+                    string Username = Username1.Text, Password = UserPassword.Text; 
+                 
 
                     conn = new SqlConnection(ConnString);
                     adapter = new SqlDataAdapter();
 
                     conn.Open();                        
 
-                    string query = "Insert into UsersTable(Id,username,password)values(@Id,@username,@password)";
+                    string query = "InsertUser";
                     cmd = new SqlCommand(query, conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.AddWithValue("@username", username);
-                    cmd.Parameters.AddWithValue("@password", password);
-                    cmd.Parameters.AddWithValue("@Id", Id);
+                    cmd.Parameters.AddWithValue("@Username", Username);
+                    cmd.Parameters.AddWithValue("@Password", Password);
+                
 
                     adapter.InsertCommand = cmd;
 
                     int count = adapter.InsertCommand.ExecuteNonQuery();
                     if (count > 0)
                     {
-                        LblDisplay.Text = $"Successfully registered a user with Id {Id}";
+                        LblDisplay.Text = $"Successfully registered a user with username {Username}";
                         
                         
                         //TAKE USER TO LOGIN PAGE
@@ -84,7 +87,7 @@ namespace InventoryManagementSystemCMPG223
 
         private bool IsValidEntry()
         {
-            return !string.IsNullOrEmpty(UserPassword.Text) && !string.IsNullOrEmpty(UserId.Text) && !string.IsNullOrEmpty(Username.Text);
+            return !string.IsNullOrEmpty(UserPassword.Text) && !string.IsNullOrEmpty(Username1.Text);
         }
 
 

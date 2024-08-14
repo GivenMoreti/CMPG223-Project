@@ -22,11 +22,10 @@
                     <td>&nbsp;</td>
                     <td class="content">
 
-                        <asp:RequiredFieldValidator ControlToValidate="UserId" ID="RequiredFieldValidator1" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
-                        <asp:TextBox ID="UserId" runat="server" placeholder="Enter your id"></asp:TextBox><br />
+                      
                         
-                        <asp:RequiredFieldValidator ControlToValidate="Username" ID="RequiredFieldValidator2" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
-                        <asp:TextBox ID="Username" runat="server" placeholder="Enter your name"></asp:TextBox><br />
+                        <asp:RequiredFieldValidator ControlToValidate="Username1" ID="RequiredFieldValidator2" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
+                        <asp:TextBox ID="Username1" runat="server" placeholder="Enter your name"></asp:TextBox><br />
                         
                         
                         <asp:RequiredFieldValidator ControlToValidate="UserPassword"  ID="RequiredFieldValidator3" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>

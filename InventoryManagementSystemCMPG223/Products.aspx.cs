@@ -16,7 +16,7 @@ namespace InventoryManagementSystemCMPG223
 
         //DEPENDENCIES
 
-        //string ConnString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\InventoryManagementSystemDB.mdf;Integrated Security=True";
+       
         readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManSysDB;Integrated Security=True;TrustServerCertificate=True";
         SqlConnection conn;
         SqlDataAdapter adapter;

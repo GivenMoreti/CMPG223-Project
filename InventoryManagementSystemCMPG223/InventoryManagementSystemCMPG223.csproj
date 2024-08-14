@@ -77,6 +77,7 @@
     <Content Include="Customers.aspx" />
     <Content Include="DeleteCustomer.aspx" />
     <Content Include="DeleteProduct.aspx" />
+    <Content Include="DeleteUser.aspx" />
     <Content Include="Homepage.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="Products.aspx" />
@@ -84,6 +85,8 @@
     <Content Include="SignUpPage.aspx" />
     <Content Include="UpdateCustomer.aspx" />
     <Content Include="UpdateProduct.aspx" />
+    <Content Include="UpdateUser.aspx" />
+    <Content Include="Users.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -121,6 +124,13 @@
     </Compile>
     <Compile Include="DeleteProduct.aspx.designer.cs">
       <DependentUpon>DeleteProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteUser.aspx.cs">
+      <DependentUpon>DeleteUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteUser.aspx.designer.cs">
+      <DependentUpon>DeleteUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Homepage.aspx.cs">
       <DependentUpon>Homepage.aspx</DependentUpon>
@@ -164,6 +174,20 @@
     </Compile>
     <Compile Include="UpdateProduct.aspx.designer.cs">
       <DependentUpon>UpdateProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateUser.aspx.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateUser.aspx.designer.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

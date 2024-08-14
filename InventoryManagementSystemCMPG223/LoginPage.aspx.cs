@@ -18,12 +18,13 @@ namespace InventoryManagementSystemCMPG223
 
         //DEPENDENCIES
 
-        string ConnString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\InventoryManagementSystemDB.mdf;Integrated Security=True";
-        //readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManagementSystemDB;Integrated Security=True;Trust Server Certificate=True";
+
+        readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManSysDB;Integrated Security=True;TrustServerCertificate=True";
         SqlConnection conn;
         SqlDataAdapter adapter;
         SqlCommand cmd;
-    
+
+
 
         protected void SignInBtn_Click(object sender, EventArgs e)
         {
@@ -68,59 +69,46 @@ namespace InventoryManagementSystemCMPG223
             return !string.IsNullOrEmpty(Username.Text) && !string.IsNullOrEmpty(UserPassword.Text);
         }
 
-        public bool AuthenticateUser(string username, string password)
+        public bool AuthenticateUser(string Username, string Password)
         {
             bool isAuthenticated = false;
 
-
             try
             {
-                conn = new SqlConnection(ConnString);
-                string query = "SELECT Password FROM Userstable WHERE username = @username";
-                adapter = new SqlDataAdapter();
-                cmd = new SqlCommand(query, conn);
-
-                cmd.Parameters.AddWithValue("@username", username);
-                adapter.SelectCommand = cmd;
-                conn.Open();
-
-                //used to retrieve password from the database for selected username.
-                object result = cmd.ExecuteScalar();
-
-                string storedPassword;
-
-                if (result != null)
+                using (conn = new SqlConnection(ConnString))
                 {
-                    storedPassword = result.ToString();
-                }
-                else
-                {
-                    storedPassword = null;
-                }
+                    conn.Open();
 
-                // Compare the retrieved password with the password entered by the user
-                if (storedPassword != null && storedPassword.Equals(password))
-                {
-                    // Authentication successful
-                    isAuthenticated = true;
-                }
-                else
-                {
-                    isAuthenticated = false;
-                    LblDisplay.Text = "Invalid password or username";
-                }
+                    using (cmd = new SqlCommand("LoginUser", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
 
+                        // Add parameters to the command
+                        cmd.Parameters.AddWithValue("@Username", Username);
+                        cmd.Parameters.AddWithValue("@Password", Password);
+
+                        // Execute the stored procedure and get the result
+                        int result = (int)cmd.ExecuteScalar();
+
+                        // If the result is 1, authentication is successful
+                        if (result == 1)
+                        {
+                            isAuthenticated = true;
+                        }
+                        else
+                        {
+                            LblDisplay.Text = "Invalid username or password";
+                        }
+                    }
+                }
             }
             catch (SqlException ex)
             {
                 LblDisplay.Text = ex.Message;
             }
-            finally
-            {
-                conn.Close();
-            }
 
             return isAuthenticated;
         }
+
     }
 }

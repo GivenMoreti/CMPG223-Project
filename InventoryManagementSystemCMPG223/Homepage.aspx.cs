@@ -15,16 +15,18 @@ namespace InventoryManagementSystemCMPG223
         {
             if (!IsPostBack)
             {
-               //assign lables to the main dashboard
+                //ADD COUNTS FOR ENTITIES HERE
+                //assign lables to the main dashboard
                 int productCount = GetCount("CountProducts");
                 ProductCountLbl.Text = productCount.ToString() + " Products";
 
                int customerCount = GetCount("CountCustomers");
                CustomerCountLbl.Text = customerCount.ToString() +  " Customers";
 
-                //ADD COUNTS FOR OTHER ENTITIES HERE
+               
 
-
+                int countUsers = GetCount("CountAllUsers");
+                UsersCountLbl.Text = countUsers.ToString() + " Users";
 
 
                 //HANDLE COOKIES

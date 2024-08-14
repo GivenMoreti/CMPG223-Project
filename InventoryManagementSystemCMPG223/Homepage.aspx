@@ -66,6 +66,13 @@
                             <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Products.aspx">Ordered product</asp:HyperLink>
                         </div>
                         <div class="div-item">
+                            <span class="material-icons">manage_accounts</span>
+                             <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/Users.aspx">Users</asp:HyperLink>
+                        </div>
+
+
+
+                        <div class="div-item">
                             <span class="material-icons">logout</span>
                             <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/LoginPage.aspx">Logout</asp:HyperLink>
                         </div>
@@ -82,6 +89,10 @@
 
                         <div id="productCountContainer">
                             <asp:Label ID="CustomerCountLbl" runat="server" Text=""></asp:Label>
+                        </div>
+
+                         <div id="productCountContainer">
+                             <asp:Label ID="UsersCountLbl" runat="server" Text=""></asp:Label>
                         </div>
 
 

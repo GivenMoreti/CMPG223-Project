@@ -114,6 +114,15 @@ namespace InventoryManagementSystemCMPG223
         protected global::System.Web.UI.WebControls.HyperLink HyperLink7;
 
         /// <summary>
+        /// HyperLink9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink9;
+
+        /// <summary>
         /// HyperLink8 control.
         /// </summary>
         /// <remarks>
@@ -139,6 +148,15 @@ namespace InventoryManagementSystemCMPG223
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label CustomerCountLbl;
+
+        /// <summary>
+        /// UsersCountLbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label UsersCountLbl;
 
         /// <summary>
         /// FeedbackLbl control.

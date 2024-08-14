@@ -12,6 +12,8 @@
 .mid-container {
     background-color: mintcream;
     background-color: ghostwhite;
+    display:flex;
+    flex-direction:row;
 }
 
 body {
@@ -31,24 +33,23 @@ body {
     opacity: 0.7;
 }
 
-#Name,#Description, #Size, #Price1, #ProductId, #SearchItem, #CustomerIdTB, #CustomerNameTB, #CustomerEmailTB, #Username, #UserPassword, #UserId {
+#Name, #Description, #Size, #Price1, #ProductId, #SearchItem, #CustomerIdTB, #CustomerNameTB, #CustomerEmailTB, #Username, #UserPassword, #UserId, #Username1, #UserIdTB, #UsernameTB {
     border-radius: 5px;
     border: 0px;
     margin: 5px;
     padding: 20px;
     width: 100%;
-   
 }
 
-#AddProductBtn, #CreateCustomerProfileBtn, #DeleteCustomerBtn, #SignInBtn, #SignUpBtn,#UpdateCustomerBtn {
+#AddProductBtn, #CreateCustomerProfileBtn, #DeleteCustomerBtn, #SignInBtn, #SignUpBtn, #UpdateCustomerBtn, #UpdateUserBtn, #DeleteUserBtn {
     padding: 30px;
     width: 104%;
     border: 1px solid white;
     border-radius: 5px;
     background-color: deepskyblue;
     color: white;
-    font-size:16px;
-    margin:10px;
+    font-size: 16px;
+    margin: 10px;
 }
 
 #SearchBtn {
@@ -87,23 +88,23 @@ body {
     height: 100px;
 }
 
-#HyperLink5, #HyperLink6, #HyperLink7, #HyperLink8, #HyperLink1, #HyperLink2, #HyperLink3, #HyperLink4, #HyperLink8 {
+#HyperLink5, #HyperLink6, #HyperLink7, #HyperLink8, #HyperLink1, #HyperLink2, #HyperLink3, #HyperLink4, #HyperLink8, #HyperLink9 {
     text-decoration: none;
     font-size: 14px;
     color: black;
-    margin: 20px;
+    margin: 15px;
     display: flex;
     flex-direction: column;
-    height: 25px;
+    height: 15px;
 }
 
 .sidebar {
-    height: 200px;
-    margin: 10px;
+    height: 150px;
+   
 }
 
 
-#HyperLink5:hover, #HyperLink6:hover, #HyperLink7:hover, #HyperLink8:hover, #HyperLink1:hover, #HyperLink2:hover, #HyperLink3:hover, #HyperLink4:hover, #HyperLink8:hover {
+#HyperLink5:hover, #HyperLink6:hover, #HyperLink7:hover, #HyperLink8:hover, #HyperLink1:hover, #HyperLink2:hover, #HyperLink3:hover, #HyperLink4:hover, #HyperLink8:hover, #HyperLink9:hover {
     text-decoration-line: underline;
     text-underline-offset: 10px;
     text-decoration-color: skyblue;
@@ -124,7 +125,7 @@ body {
     width: 100px;
     text-align: center;
     height: 100px;
-    margin-top: 0px;
+    margin-top: 30px;
     display: flex;
     flex-direction: row;
     border-radius: 10px;
@@ -132,9 +133,10 @@ body {
     margin-left: 40px;
 }
 
-#ProductCountLbl, #CustomerCountLbl {
+#ProductCountLbl, #CustomerCountLbl, #UsersCountLbl{
     font-size: 20px;
     color: white;
+    text-align:center;
 }
 
 #LblGreet {
@@ -171,7 +173,7 @@ body {
     font-weight: 500;
     opacity: 0.8;
 }
-#CustomerGridView, #ProductsGridView {
+#CustomerGridView, #ProductsGridView, #UsersGridView {
     width: 80%;
     height: 40%;
 }

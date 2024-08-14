@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9D17DD1F-AAD5-4FFF-8A41-20AB88C27B22}|InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223.csproj|c:\\users\\givenchie\\desktop\\inventorymanagementsystemcmpg223\\inventorymanagementsystemcmpg223\\homepage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D17DD1F-AAD5-4FFF-8A41-20AB88C27B22}|InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223.csproj|solutionrelative:inventorymanagementsystemcmpg223\\homepage.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D17DD1F-AAD5-4FFF-8A41-20AB88C27B22}|InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223.csproj|c:\\users\\givenchie\\desktop\\inventorymanagementsystemcmpg223\\inventorymanagementsystemcmpg223\\productstyles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{9D17DD1F-AAD5-4FFF-8A41-20AB88C27B22}|InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223.csproj|solutionrelative:inventorymanagementsystemcmpg223\\productstyles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D17DD1F-AAD5-4FFF-8A41-20AB88C27B22}|InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223.csproj|c:\\users\\givenchie\\desktop\\inventorymanagementsystemcmpg223\\inventorymanagementsystemcmpg223\\updatecustomer.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D17DD1F-AAD5-4FFF-8A41-20AB88C27B22}|InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223.csproj|solutionrelative:inventorymanagementsystemcmpg223\\updatecustomer.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D17DD1F-AAD5-4FFF-8A41-20AB88C27B22}|InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223.csproj|c:\\users\\givenchie\\desktop\\inventorymanagementsystemcmpg223\\inventorymanagementsystemcmpg223\\deletecustomer.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D17DD1F-AAD5-4FFF-8A41-20AB88C27B22}|InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223.csproj|solutionrelative:inventorymanagementsystemcmpg223\\deletecustomer.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D17DD1F-AAD5-4FFF-8A41-20AB88C27B22}|InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223.csproj|c:\\users\\givenchie\\desktop\\inventorymanagementsystemcmpg223\\inventorymanagementsystemcmpg223\\createcustomer.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{9D17DD1F-AAD5-4FFF-8A41-20AB88C27B22}|InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223.csproj|solutionrelative:inventorymanagementsystemcmpg223\\createcustomer.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{9D17DD1F-AAD5-4FFF-8A41-20AB88C27B22}|InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223.csproj|c:\\users\\givenchie\\desktop\\inventorymanagementsystemcmpg223\\inventorymanagementsystemcmpg223\\deleteuser.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9D17DD1F-AAD5-4FFF-8A41-20AB88C27B22}|InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223.csproj|solutionrelative:inventorymanagementsystemcmpg223\\deleteuser.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,54 +22,15 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DeleteCustomer.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223\\DeleteCustomer.aspx.cs",
-              "RelativeDocumentMoniker": "InventoryManagementSystemCMPG223\\DeleteCustomer.aspx.cs",
-              "ToolTip": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223\\DeleteCustomer.aspx.cs",
-              "RelativeToolTip": "InventoryManagementSystemCMPG223\\DeleteCustomer.aspx.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAA2wCQAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T11:21:47.757Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UpdateCustomer.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223\\UpdateCustomer.aspx.cs",
-              "RelativeDocumentMoniker": "InventoryManagementSystemCMPG223\\UpdateCustomer.aspx.cs",
-              "ToolTip": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223\\UpdateCustomer.aspx.cs",
-              "RelativeToolTip": "InventoryManagementSystemCMPG223\\UpdateCustomer.aspx.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAcwEEAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T11:20:30.966Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CreateCustomer.aspx",
-              "DocumentMoniker": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223\\CreateCustomer.aspx",
-              "RelativeDocumentMoniker": "InventoryManagementSystemCMPG223\\CreateCustomer.aspx",
-              "ToolTip": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223\\CreateCustomer.aspx",
-              "RelativeToolTip": "InventoryManagementSystemCMPG223\\CreateCustomer.aspx",
+              "Title": "DeleteUser.aspx",
+              "DocumentMoniker": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223\\DeleteUser.aspx",
+              "RelativeDocumentMoniker": "InventoryManagementSystemCMPG223\\DeleteUser.aspx",
+              "ToolTip": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223\\DeleteUser.aspx",
+              "RelativeToolTip": "InventoryManagementSystemCMPG223\\DeleteUser.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-08-13T11:18:47.276Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Homepage.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223\\Homepage.aspx.cs",
-              "RelativeDocumentMoniker": "InventoryManagementSystemCMPG223\\Homepage.aspx.cs",
-              "ToolTip": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223\\Homepage.aspx.cs",
-              "RelativeToolTip": "InventoryManagementSystemCMPG223\\Homepage.aspx.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAA2wBkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T11:11:02.984Z",
+              "WhenOpened": "2024-08-14T09:05:53.482Z",
               "EditorCaption": ""
             },
             {
@@ -87,6 +40,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductStyles.css",
+              "DocumentMoniker": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223\\ProductStyles.css",
+              "RelativeDocumentMoniker": "InventoryManagementSystemCMPG223\\ProductStyles.css",
+              "ToolTip": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223\\ProductStyles.css",
+              "RelativeToolTip": "InventoryManagementSystemCMPG223\\ProductStyles.css",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACsAAACJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-08-14T08:36:01.538Z",
+              "EditorCaption": ""
             }
           ]
         }
