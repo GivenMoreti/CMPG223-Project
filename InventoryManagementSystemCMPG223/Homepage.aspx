@@ -70,12 +70,23 @@
                              <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/Users.aspx">Users</asp:HyperLink>
                         </div>
 
+                         <div class="div-item">
+                            <span class="material-icons">
+                                receipt
+                                </span>
+                             <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/GenerateReport.aspx">Reports</asp:HyperLink>
+                         </div>
+
 
 
                         <div class="div-item">
                             <span class="material-icons">logout</span>
                             <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/LoginPage.aspx">Logout</asp:HyperLink>
                         </div>
+
+                        
+                       
+
 
 
                     </td>
@@ -115,3 +126,40 @@
 
 </body>
 </html>
+<script>
+
+    //come back to the javascript
+
+
+/*
+    document.addEventListener("DOMContentLoaded", () => {
+
+        let divItems = document.getElementsByClassName("div-item");
+
+        // Loop through all elements with the class "div-item" and add the event listener to each one
+        for (let i = 0; i < divItems.length; i++) {
+            divItems[i].addEventListener("mouseover", () => {
+                divItems[i].style.color = "red";
+            });
+        }
+
+        let item = document.getElementById("productCountContainer");
+
+      
+
+
+       // item.addEventListener("mouseover", () => {
+         //   item.style.display = "none";
+       // });
+
+        //item.addEventListener("mouseout", () => {
+          //  item.style.display = "block";
+        //});
+
+
+
+    });
+*/
+   
+
+</script>

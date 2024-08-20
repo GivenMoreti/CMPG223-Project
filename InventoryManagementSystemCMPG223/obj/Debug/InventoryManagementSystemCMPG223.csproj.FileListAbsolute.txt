@@ -57,3 +57,7 @@ C:\Users\Givenchie\Desktop\InventoryManagementSystemCMPG223\InventoryManagementS
 C:\Users\Givenchie\Desktop\InventoryManagementSystemCMPG223\InventoryManagementSystemCMPG223\obj\Debug\Inventor.80BF4234.Up2Date
 C:\Users\Givenchie\Desktop\InventoryManagementSystemCMPG223\InventoryManagementSystemCMPG223\obj\Debug\InventoryManagementSystemCMPG223.dll
 C:\Users\Givenchie\Desktop\InventoryManagementSystemCMPG223\InventoryManagementSystemCMPG223\obj\Debug\InventoryManagementSystemCMPG223.pdb
+C:\Users\Givenchie\Desktop\InventoryManagementSystemCMPG223\InventoryManagementSystemCMPG223\bin\BouncyCastle.Cryptography.dll
+C:\Users\Givenchie\Desktop\InventoryManagementSystemCMPG223\InventoryManagementSystemCMPG223\bin\itextsharp.dll
+C:\Users\Givenchie\Desktop\InventoryManagementSystemCMPG223\InventoryManagementSystemCMPG223\bin\BouncyCastle.Cryptography.xml
+C:\Users\Givenchie\Desktop\InventoryManagementSystemCMPG223\InventoryManagementSystemCMPG223\bin\itextsharp.xml

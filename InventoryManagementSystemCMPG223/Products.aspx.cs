@@ -15,8 +15,6 @@ namespace InventoryManagementSystemCMPG223
 
 
         //DEPENDENCIES
-
-       
         readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManSysDB;Integrated Security=True;TrustServerCertificate=True";
         SqlConnection conn;
         SqlDataAdapter adapter;
@@ -112,7 +110,7 @@ namespace InventoryManagementSystemCMPG223
             }
         }
 
-        /*
+        
         //query specify get by id,*, or other args
         public void GetProducts(string query, string searchKey)
             {
@@ -151,7 +149,7 @@ namespace InventoryManagementSystemCMPG223
             }
 
  
-        */
+        
         protected void SearchBtn_Click(object sender, EventArgs e)
         {
            /*
