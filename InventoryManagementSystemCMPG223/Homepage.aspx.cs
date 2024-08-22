@@ -16,18 +16,58 @@ namespace InventoryManagementSystemCMPG223
             if (!IsPostBack)
             {
                 //ADD COUNTS FOR ENTITIES HERE
-                //assign lables to the main dashboard
+       
                 int productCount = GetCount("CountProducts");
-                ProductCountLbl.Text = productCount.ToString() + " Products";
+                
+                if(productCount > 1)
+                {
+                    ProductCountLbl.Text = productCount.ToString() + " Products";
+                }
+                else
+                {
+                    ProductCountLbl.Text = productCount.ToString() + " Product";
+                }
+                
 
                int customerCount = GetCount("CountCustomers");
-               CustomerCountLbl.Text = customerCount.ToString() +  " Customers";
+               
+                if(customerCount > 1)
+                {
+                    CustomerCountLbl.Text = customerCount.ToString() + " Customers";
+                }
+                else
+                {
+                    CustomerCountLbl.Text = customerCount.ToString() + " Customer";
+                }
+               
 
                
 
                 int countUsers = GetCount("CountAllUsers");
-                UsersCountLbl.Text = countUsers.ToString() + " Users";
+                
+                if(countUsers > 1)
+                {
+                    UsersCountLbl.Text = countUsers.ToString() + " Active Users";
+                }
+                else
+                {
+                    UsersCountLbl.Text = countUsers.ToString() + " Active User";
+                }
+              
 
+
+                int countSuppliers = GetCount("CountSuppliers");
+                
+                if( countSuppliers > 1)
+                {
+
+               
+                SuppliersCountLbl.Text = countSuppliers.ToString() + " Suppliers";
+                }
+                else
+                {
+                    SuppliersCountLbl.Text = countSuppliers.ToString() + " Supplier";
+                }
 
                 //HANDLE COOKIES
                 HttpCookie cookie = Request.Cookies["userDetails"];

@@ -80,9 +80,13 @@
     </Content>
     <Content Include="CreateCustomer.aspx" />
     <Content Include="CreateProduct.aspx" />
+    <Content Include="CreateSpecial.aspx" />
+    <Content Include="CreateSupplier.aspx" />
     <Content Include="Customers.aspx" />
     <Content Include="DeleteCustomer.aspx" />
     <Content Include="DeleteProduct.aspx" />
+    <Content Include="DeleteSpecial.aspx" />
+    <Content Include="DeleteSupplier.aspx" />
     <Content Include="DeleteUser.aspx" />
     <Content Include="GenerateReport.aspx" />
     <Content Include="Homepage.aspx" />
@@ -90,8 +94,12 @@
     <Content Include="Products.aspx" />
     <Content Include="ProductStyles.css" />
     <Content Include="SignUpPage.aspx" />
+    <Content Include="Specials.aspx" />
+    <Content Include="Suppliers.aspx" />
     <Content Include="UpdateCustomer.aspx" />
     <Content Include="UpdateProduct.aspx" />
+    <Content Include="UpdateSpecial.aspx" />
+    <Content Include="UpdateSupplier.aspx" />
     <Content Include="UpdateUser.aspx" />
     <Content Include="Users.aspx" />
     <Content Include="Web.config" />
@@ -110,6 +118,20 @@
     </Compile>
     <Compile Include="CreateProduct.aspx.designer.cs">
       <DependentUpon>CreateProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateSpecial.aspx.cs">
+      <DependentUpon>CreateSpecial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateSpecial.aspx.designer.cs">
+      <DependentUpon>CreateSpecial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateSupplier.aspx.cs">
+      <DependentUpon>CreateSupplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateSupplier.aspx.designer.cs">
+      <DependentUpon>CreateSupplier.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customers.aspx.cs">
       <DependentUpon>Customers.aspx</DependentUpon>
@@ -131,6 +153,20 @@
     </Compile>
     <Compile Include="DeleteProduct.aspx.designer.cs">
       <DependentUpon>DeleteProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteSpecial.aspx.cs">
+      <DependentUpon>DeleteSpecial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteSpecial.aspx.designer.cs">
+      <DependentUpon>DeleteSpecial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteSupplier.aspx.cs">
+      <DependentUpon>DeleteSupplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteSupplier.aspx.designer.cs">
+      <DependentUpon>DeleteSupplier.aspx</DependentUpon>
     </Compile>
     <Compile Include="DeleteUser.aspx.cs">
       <DependentUpon>DeleteUser.aspx</DependentUpon>
@@ -175,6 +211,20 @@
     <Compile Include="SignUpPage.aspx.designer.cs">
       <DependentUpon>SignUpPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Specials.aspx.cs">
+      <DependentUpon>Specials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Specials.aspx.designer.cs">
+      <DependentUpon>Specials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suppliers.aspx.cs">
+      <DependentUpon>Suppliers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suppliers.aspx.designer.cs">
+      <DependentUpon>Suppliers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UpdateCustomer.aspx.cs">
       <DependentUpon>UpdateCustomer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -188,6 +238,20 @@
     </Compile>
     <Compile Include="UpdateProduct.aspx.designer.cs">
       <DependentUpon>UpdateProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateSpecial.aspx.cs">
+      <DependentUpon>UpdateSpecial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateSpecial.aspx.designer.cs">
+      <DependentUpon>UpdateSpecial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateSupplier.aspx.cs">
+      <DependentUpon>UpdateSupplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateSupplier.aspx.designer.cs">
+      <DependentUpon>UpdateSupplier.aspx</DependentUpon>
     </Compile>
     <Compile Include="UpdateUser.aspx.cs">
       <DependentUpon>UpdateUser.aspx</DependentUpon>

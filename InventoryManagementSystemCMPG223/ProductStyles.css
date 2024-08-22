@@ -33,7 +33,7 @@ body {
     opacity: 0.7;
 }
 
-#Name, #Description, #Size, #Price1, #ProductId, #SearchItem, #CustomerIdTB, #CustomerNameTB, #CustomerEmailTB, #Username, #UserPassword, #UserId, #Username1, #UserIdTB, #UsernameTB, #Price {
+#Name, #Description, #Size, #Price1, #ProductId, #SearchItem, #CustomerIdTB, #txtSupplierId, #CustomerNameTB, #CustomerEmailTB, #Username, #UserPassword, #UserId, #Username1, #UserIdTB, #UsernameTB, #Price, #txtSupplierId, #txtEmail, #txtName, #supplierName,#supplierEmail {
     border-radius: 5px;
     border: 0px;
     margin: 5px;
@@ -41,7 +41,7 @@ body {
     width: 100%;
 }
 
-#AddProductBtn, #CreateCustomerProfileBtn, #DeleteCustomerBtn, #SignInBtn, #SignUpBtn, #UpdateCustomerBtn, #UpdateUserBtn, #DeleteUserBtn, #GenerateReportBtn {
+#AddProductBtn, #CreateCustomerProfileBtn, #DeleteCustomerBtn, #SignInBtn, #SignUpBtn, #UpdateCustomerBtn, #DeleteSupplierBtn, #UpdateUserBtn, #DeleteUserBtn, #GenerateReportBtn, #CreateSupplierBtn, #UpdateSupplierBtn {
     padding: 30px;
     width: 104%;
     border: 1px solid white;
@@ -120,7 +120,7 @@ body {
 }
 
 #productCountContainer {
-    background-color: dimgrey;
+    background-color: lightslategray;
     padding: 60px;
     width: 100px;
     text-align: center;
@@ -133,10 +133,10 @@ body {
     margin-left: 40px;
 }
 
-#ProductCountLbl, #CustomerCountLbl, #UsersCountLbl{
+#ProductCountLbl, #CustomerCountLbl, #UsersCountLbl, #SuppliersCountLbl {
     font-size: 20px;
     color: white;
-    text-align:center;
+    text-align: center;
 }
 
 #LblGreet {

@@ -55,11 +55,11 @@
                         </div>
                         <div class="div-item">
                             <span class="material-icons">discount</span>
-                            <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Products.aspx">Specials</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Specials.aspx">Specials</asp:HyperLink>
                         </div>
                         <div class="div-item">
                             <span class="material-icons">business</span>
-                            <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Products.aspx">Supplier</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Suppliers.aspx">Suppliers</asp:HyperLink>
                         </div>
                         <div class="div-item">
                             <span class="material-icons">shopping_cart</span>
@@ -105,6 +105,10 @@
                          <div id="productCountContainer">
                              <asp:Label ID="UsersCountLbl" runat="server" Text=""></asp:Label>
                         </div>
+                         <div id="productCountContainer">
+                             <asp:Label ID="SuppliersCountLbl" runat="server" Text=""></asp:Label>
+                        </div>
+
 
 
                     </td>
