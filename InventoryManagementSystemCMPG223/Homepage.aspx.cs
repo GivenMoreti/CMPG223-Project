@@ -69,6 +69,24 @@ namespace InventoryManagementSystemCMPG223
                     SuppliersCountLbl.Text = countSuppliers.ToString() + " Supplier";
                 }
 
+                //count specials
+
+
+                int countSpecials = GetCount("CountSpecials");
+                if(countSpecials > 1)
+                {
+                    SpecialsCountLbl.Text = countSpecials.ToString() + " Specials";
+                }
+                else
+                {
+                    SpecialsCountLbl.Text = countSpecials.ToString() + " Special";
+                }
+
+
+
+
+
+
                 //HANDLE COOKIES
                 HttpCookie cookie = Request.Cookies["userDetails"];
 

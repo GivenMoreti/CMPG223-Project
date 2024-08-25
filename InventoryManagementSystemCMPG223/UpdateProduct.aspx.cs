@@ -22,7 +22,7 @@ namespace InventoryManagementSystemCMPG223
         SqlConnection conn;
         SqlDataAdapter adapter;
         SqlCommand cmd;
-        DataSet ds;
+
 
    
 

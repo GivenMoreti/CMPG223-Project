@@ -18,7 +18,6 @@ namespace InventoryManagementSystemCMPG223
 
         readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManSysDB;Integrated Security=True;TrustServerCertificate=True";
         SqlConnection conn;
-        SqlDataAdapter adapter;
         SqlCommand cmd;
 
         public void DeleteASupplier()
@@ -26,9 +25,9 @@ namespace InventoryManagementSystemCMPG223
    
             try
             {
+                conn = new SqlConnection(ConnString);
                 conn.Open();
-
-                //use DeleteSupplier procedure
+             
                 string sql = "DeleteSupplier";
                 cmd = new SqlCommand(sql, conn);
                 cmd.CommandType = CommandType.StoredProcedure;

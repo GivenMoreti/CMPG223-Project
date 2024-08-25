@@ -21,7 +21,7 @@ namespace InventoryManagementSystemCMPG223
 
         readonly string ConnString = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManSysDB;Integrated Security=True;TrustServerCertificate=True";
         SqlConnection conn;
-        SqlDataAdapter adapter;
+  
         SqlCommand cmd;
 
 

@@ -29,11 +29,16 @@
               
               <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtDiscount" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
               <asp:TextBox ID="txtDiscount" placeholder="Discount" runat="server"></asp:TextBox>
-              <asp:TextBox ID="txtStartDate" placeholder="use calenda" runat="server"></asp:TextBox>
+              <div class="calendars">
+                  <asp:Label ID="Label1" runat="server" Text="Start: "></asp:Label><br />
+              <asp:Calendar ID="txtStartDate" runat="server"></asp:Calendar>
+                  <asp:Label ID="Label2" runat="server" Text="End: "></asp:Label><br />
+              <asp:Calendar ID="txtEndDate" runat="server"></asp:Calendar>
+            
+</div>
+             
 
-               <asp:TextBox ID="txtEndDate" placeholder="use calenda" runat="server"></asp:TextBox>
-
-              <asp:Button ID="CreateCustomerProfileBtn" runat="server" Text="Create Special" />
+              <asp:Button ID="CreateSpecialBtn" runat="server" Text="Create Special" OnClick="CreateSpecialBtn_Click" />
           </td>
           <td>&nbsp;</td>
       </tr>

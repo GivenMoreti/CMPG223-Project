@@ -38,10 +38,10 @@ namespace InventoryManagementSystemCMPG223
                 ds = new DataSet();
                 conn.Open();
 
-                cmd = new SqlCommand("SelectAllSuppliers", conn)
-                {
-                    CommandType = CommandType.StoredProcedure
-                };
+                cmd = new SqlCommand("SelectAllSpecials", conn);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+             
 
                 adapter.SelectCommand = cmd;
                 adapter.Fill(ds);

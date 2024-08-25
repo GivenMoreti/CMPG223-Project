@@ -16,7 +16,7 @@ namespace InventoryManagementSystemCMPG223
         {
             if(!IsPostBack)
             {
-                AddSpecial();
+      
             }
            
         }
@@ -27,37 +27,95 @@ namespace InventoryManagementSystemCMPG223
         SqlConnection conn;
         SqlDataAdapter adapter;
         SqlCommand cmd;
-        DataSet ds;
+ 
 
         public void AddSpecial() {
             try
             {
                 //Connecting to Database
+                conn = new SqlConnection(ConnString);
                 conn.Open();
+      
+                adapter = new SqlDataAdapter();
 
                 cmd = new SqlCommand("InsertSpecial", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@ProductId", int.Parse(txtProductId.Text));
-                cmd.Parameters.AddWithValue("@Discount", float.Parse(txtDiscount.Text));
-                cmd.Parameters.AddWithValue("@StartDate", DateTime.Parse(txtStartDate.Text));
-                cmd.Parameters.AddWithValue("@EndDate", DateTime.Parse(txtEndDate.Text));
-                adapter = new SqlDataAdapter();
+                //get special details
+                string ProductId = txtProductId.Text;
+                string Discount = txtDiscount.Text;
+                DateTime StartDate = GetStartDate();
+                DateTime EndDate = GetEndDate();
+
+
+                cmd.Parameters.AddWithValue("@ProductId", ProductId);
+                cmd.Parameters.AddWithValue("@Discount", Discount);
+                cmd.Parameters.AddWithValue("@StartDate", StartDate);
+                cmd.Parameters.AddWithValue("@EndDate", EndDate);
+
+
                 adapter.InsertCommand = cmd;
 
-                adapter.InsertCommand.ExecuteNonQuery();
+            
+               int count = cmd.ExecuteNonQuery();
+                if(count > 0)
+                {
 
-                //Closing Connection to Database
-                conn.Close();
+                    errorLabel.Text = "Successfully added a special";
+                }
+                else
+                {
+
+                    errorLabel.Text = "Failed to add a special";
+                }
+                                     
             }
             catch (SqlException error)
             {
-                //Error shown if Connection Failed 
-                errorLabel.Text = $"{error.Message}";
+         
+                errorLabel.Text = error.ToString();
+            }
+            finally
+            {
+                conn.Close();
             }
 
-            //Redirect to Specials page
-            Response.Redirect("Specials.aspx");
+   
+        }
+
+        public DateTime GetStartDate()
+        {
+            DateTime startDate = txtStartDate.SelectedDate.Date;
+            DateTime endDate = txtEndDate.SelectedDate.Date;
+
+            if(startDate > endDate)
+            {
+                errorLabel.Text = $"Start date:{startDate} and end date: {endDate} invalid";
+            }
+
+            return startDate;
+
+
+        }
+
+        public DateTime GetEndDate()
+        {
+            DateTime startDate = txtStartDate.SelectedDate.Date;
+            DateTime endDate = txtEndDate.SelectedDate.Date;
+
+            if (startDate > endDate)
+            {
+                errorLabel.Text = $"Start date:{startDate} and end date: {endDate} invalid";
+            }
+
+            return endDate;
+
+
+        }
+
+        protected void CreateSpecialBtn_Click(object sender, EventArgs e)
+        {
+            AddSpecial();
         }
     }
     }

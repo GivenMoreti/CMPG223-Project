@@ -108,6 +108,10 @@
                          <div id="productCountContainer">
                              <asp:Label ID="SuppliersCountLbl" runat="server" Text=""></asp:Label>
                         </div>
+                        <br />
+                         <div id="productCountContainer">
+                            <asp:Label ID="SpecialsCountLbl" runat="server" Text=""></asp:Label>
+                        </div>
 
 
 

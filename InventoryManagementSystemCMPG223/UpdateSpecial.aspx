@@ -25,20 +25,24 @@
                 <tr>
                     <td style="width: 20%;">&nbsp;</td>
                     <td class="content">
+                        <asp:RequiredFieldValidator ID="ffd" runat="server" ControlToValidate="pId" ErrorMessage="*"></asp:RequiredFieldValidator>
+                        <asp:TextBox ID="pId" runat="server" placeholder="product id"></asp:TextBox>
+                        
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="SpecialId" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
+                        <asp:TextBox ID="SpecialId" runat="server" placeholder="Special Code/id"></asp:TextBox><br />
 
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="CustomerIdTB" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
-                        <asp:TextBox ID="CustomerIdTB" runat="server" placeholder="Special Code/id"></asp:TextBox><br />
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtDiscount" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
+                        <asp:TextBox ID="txtDiscount" runat="server" placeholder="Discount %"></asp:TextBox><br />
 
+                        <div class="calendars">
+                            <asp:Label ID="Label1" runat="server" Text="Start: "></asp:Label> 
+                        <asp:Calendar ID="StartDate" runat="server"></asp:Calendar>
+                            <br />
+                            <asp:Label ID="Label2" runat="server" Text="End: "></asp:Label>    
+                        <asp:Calendar ID="EndDate" runat="server"></asp:Calendar>
+                            </div>
 
-                        <asp:RequiredFieldValidator ControlToValidate="CustomerNameTB" ID="RequiredFieldValidator2" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
-                        <asp:TextBox ID="CustomerNameTB" runat="server" placeholder="customer name"></asp:TextBox><br />
-
-
-                        <asp:RequiredFieldValidator ControlToValidate="CustomerEmailTB" ID="RequiredFieldValidator3" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
-                        <asp:TextBox ID="CustomerEmailTB" runat="server" placeholder="customer email"></asp:TextBox>
-                        <br />
-
-                        <asp:Button ID="UpdateCustomerBtn" runat="server" Text="Update Special" />
+                        <asp:Button ID="UpdateSpecialBtn" runat="server" Text="Save & Update" OnClick="UpdateSpecialBtn_Click1" />
                         <br />
                         <asp:Label ID="FeedbackLbl" runat="server" Text=""></asp:Label><br />
                     </td>
@@ -49,7 +53,7 @@
                     <td>
 
 
-                        <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Suppliers.aspx" runat="server">See Specials</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Specials.aspx" runat="server">See Specials</asp:HyperLink>
                     </td>
                     <td>&nbsp;</td>
                 </tr>

@@ -14,6 +14,7 @@
     background-color: ghostwhite;
     display:flex;
     flex-direction:row;
+    width:0px;
 }
 
 body {
@@ -33,7 +34,7 @@ body {
     opacity: 0.7;
 }
 
-#Name, #Description, #Size, #Price1, #ProductId, #SearchItem, #CustomerIdTB, #txtSupplierId, #CustomerNameTB, #CustomerEmailTB, #Username, #UserPassword, #UserId, #Username1, #UserIdTB, #UsernameTB, #Price, #txtSupplierId, #txtEmail, #txtName, #supplierName,#supplierEmail {
+#Name, #Description, #Size, #Price1, #ProductId, #SearchItem, #CustomerIdTB, #txtSupplierId, #CustomerNameTB, #CustomerEmailTB, #Username, #UserPassword, #UserId, #Username1, #UserIdTB, #UsernameTB, #Price, #txtSupplierId, #txtEmail, #txtName, #supplierName, #supplierEmail, #txtProductId, #txtDiscount, #pId, #SpecialId, #sId {
     border-radius: 5px;
     border: 0px;
     margin: 5px;
@@ -41,7 +42,7 @@ body {
     width: 100%;
 }
 
-#AddProductBtn, #CreateCustomerProfileBtn, #DeleteCustomerBtn, #SignInBtn, #SignUpBtn, #UpdateCustomerBtn, #DeleteSupplierBtn, #UpdateUserBtn, #DeleteUserBtn, #GenerateReportBtn, #CreateSupplierBtn, #UpdateSupplierBtn {
+#AddProductBtn, #CreateCustomerProfileBtn, #DeleteCustomerBtn, #SignInBtn, #SignUpBtn, #UpdateCustomerBtn, #DeleteSupplierBtn, #UpdateUserBtn, #DeleteUserBtn, #GenerateReportBtn, #CreateSupplierBtn, #UpdateSupplierBtn, #CreateSpecialBtn, #UpdateSpecialBtn, #DeleteSpecialBtn {
     padding: 30px;
     width: 104%;
     border: 1px solid white;
@@ -133,7 +134,7 @@ body {
     margin-left: 40px;
 }
 
-#ProductCountLbl, #CustomerCountLbl, #UsersCountLbl, #SuppliersCountLbl {
+#ProductCountLbl, #CustomerCountLbl, #UsersCountLbl, #SuppliersCountLbl, #SpecialsCountLbl {
     font-size: 20px;
     color: white;
     text-align: center;
@@ -186,4 +187,18 @@ body {
 
 #FeedbackLbl{
     text-align:center;
+}
+
+.calendars {
+    display: flex;
+    flex-direction: row;
+
+    padding: 20px;
+}
+
+#txtStartDate, #txtEndDate, #EndDate, #StartDate {
+    width: 400px;
+    border: none;
+    border-radius: 10px;
+    margin: 40px;
 }
