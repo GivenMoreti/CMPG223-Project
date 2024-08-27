@@ -48,6 +48,7 @@ namespace InventoryManagementSystemCMPG223
                 string ProductDescription = Description.Text;
                 double Price = Double.Parse(Price1.Text);
                 double ProductSize = Double.Parse(Size.Text);
+                int InventoryId =int.Parse(inventoryId.Text);
 
 
                 // Add parameters to the command
@@ -55,7 +56,7 @@ namespace InventoryManagementSystemCMPG223
                 cmd.Parameters.AddWithValue("@ProductDescription", ProductDescription);
                 cmd.Parameters.AddWithValue("@ProductSize", ProductSize);
                 cmd.Parameters.AddWithValue("@Price", Price);
-              
+                cmd.Parameters.AddWithValue("@InventoryId", InventoryId);
 
 
                 // Execute the stored procedure

@@ -29,17 +29,20 @@
                        
 
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="Name" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
-                        <asp:TextBox ID="Name" runat="server" placeholder="item name"></asp:TextBox><br />
+                        <asp:TextBox ID="Name" runat="server" placeholder="P R O D U C T  N A M E"></asp:TextBox><br />
 
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="Price1" ErrorMessage="*"></asp:RequiredFieldValidator>
-                        <asp:TextBox ID="Price1" runat="server" placeholder="item price"></asp:TextBox>
+                        <asp:TextBox ID="Price1" runat="server" placeholder="P R O D U C T  P R I C E"></asp:TextBox>
                         <br />
 
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="Description" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
-                        <asp:TextBox ID="Description" runat="server" placeholder="item description"></asp:TextBox><br />
+                        <asp:TextBox ID="Description" runat="server" placeholder="P R O D U C T  D E S C R I P T I O N"></asp:TextBox><br />
 
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ControlToValidate="Size" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
-                        <asp:TextBox ID="Size" runat="server" placeholder="item size"></asp:TextBox><br />
+                        <asp:TextBox ID="Size" runat="server" placeholder="P R O D U C T  S I Z E"></asp:TextBox><br />
+
+                      
+                        <asp:TextBox ID="inventoryId" runat="server" placeholder="I N V E N T O R Y  I D"></asp:TextBox><br />
 
 
                        

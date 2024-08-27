@@ -8,8 +8,7 @@
 <head runat="server">
     <title>Homepage</title>
     <link rel="stylesheet" href="ProductStyles.css" type="text/css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <div class="home-container">
@@ -21,13 +20,6 @@
                         <h1>SimpliU</h1>
                     </td>
                     <td>
-                        <div class="headerItems">
-                            <asp:TextBox ID="SearchItem" runat="server" placeholder="search"></asp:TextBox>
-                            <asp:Button ID="SearchBtn" runat="server" Text="Search" />
-
-                        </div>
-
-
                     </td>
                     <td style="width: 20%;">
                         <asp:Label ID="LblGreet" runat="server" Text=""></asp:Label>
@@ -48,7 +40,10 @@
                             <span class="material-icons">people</span>
                             <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Customers.aspx">Customers</asp:HyperLink>
                         </div>
-                        <div class="div-item"><span class="material-icons">inventory</span><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Products.aspx">Inventory</asp:HyperLink></div>
+                        <div class="div-item">
+                            <span class="material-icons">inventory</span>
+                            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Inventory.aspx">Inventory</asp:HyperLink>
+                        </div>
                         <div class="div-item">
                             <span class="material-icons">local_shipping</span>
                             <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Products.aspx">Orders</asp:HyperLink>
@@ -67,53 +62,52 @@
                         </div>
                         <div class="div-item">
                             <span class="material-icons">manage_accounts</span>
-                             <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/Users.aspx">Users</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/Users.aspx">Users</asp:HyperLink>
                         </div>
 
-                         <div class="div-item">
-                            <span class="material-icons">
-                                receipt
-                                </span>
-                             <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/GenerateReport.aspx">Reports</asp:HyperLink>
-                         </div>
-
-
+                        <div class="div-item">
+                            <span class="material-icons">receipt
+                            </span>
+                            <asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/GenerateReport.aspx">Reports</asp:HyperLink>
+                        </div>
 
                         <div class="div-item">
                             <span class="material-icons">logout</span>
                             <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/LoginPage.aspx">Logout</asp:HyperLink>
                         </div>
 
-                        
-                       
-
-
-
                     </td>
 
-                    <td class="mid-container">
+                    <td>
+                        
+                            
+                        <div class="container-row">
+                           
 
+                            <div id="productCountContainer">
+                                <asp:Label ID="ProductCountLbl" runat="server" Text=""></asp:Label>
+                            </div>
 
-                        <div id="productCountContainer">
-                            <asp:Label ID="ProductCountLbl" runat="server" Text=""></asp:Label>
+                            <div id="productCountContainer">
+                                <asp:Label ID="CustomerCountLbl" runat="server" Text=""></asp:Label>
+                            </div>
+
+                            <div id="productCountContainer">
+                                <asp:Label ID="UsersCountLbl" runat="server" Text=""></asp:Label>
+                            </div>
+
+                            <div id="productCountContainer">
+                                <asp:Label ID="SuppliersCountLbl" runat="server" Text=""></asp:Label>
+                            </div>
+
+                            <div id="productCountContainer">
+                                <asp:Label ID="SpecialsCountLbl" runat="server" Text=""></asp:Label>
+                            </div>
+
+                            <div id="productCountContainer">
+                                <asp:Label ID="InventoryCountLbl" runat="server" Text=""></asp:Label>
+                            </div>
                         </div>
-
-                        <div id="productCountContainer">
-                            <asp:Label ID="CustomerCountLbl" runat="server" Text=""></asp:Label>
-                        </div>
-
-                         <div id="productCountContainer">
-                             <asp:Label ID="UsersCountLbl" runat="server" Text=""></asp:Label>
-                        </div>
-                         <div id="productCountContainer">
-                             <asp:Label ID="SuppliersCountLbl" runat="server" Text=""></asp:Label>
-                        </div>
-                        <br />
-                         <div id="productCountContainer">
-                            <asp:Label ID="SpecialsCountLbl" runat="server" Text=""></asp:Label>
-                        </div>
-
-
 
                     </td>
 
@@ -139,35 +133,35 @@
     //come back to the javascript
 
 
-/*
-    document.addEventListener("DOMContentLoaded", () => {
+    /*
+        document.addEventListener("DOMContentLoaded", () => {
+    
+            let divItems = document.getElementsByClassName("div-item");
+    
+            // Loop through all elements with the class "div-item" and add the event listener to each one
+            for (let i = 0; i < divItems.length; i++) {
+                divItems[i].addEventListener("mouseover", () => {
+                    divItems[i].style.color = "red";
+                });
+            }
+    
+            let item = document.getElementById("productCountContainer");
+    
+          
+    
+    
+           // item.addEventListener("mouseover", () => {
+             //   item.style.display = "none";
+           // });
+    
+            //item.addEventListener("mouseout", () => {
+              //  item.style.display = "block";
+            //});
+    
+    
+    
+        });
+    */
 
-        let divItems = document.getElementsByClassName("div-item");
-
-        // Loop through all elements with the class "div-item" and add the event listener to each one
-        for (let i = 0; i < divItems.length; i++) {
-            divItems[i].addEventListener("mouseover", () => {
-                divItems[i].style.color = "red";
-            });
-        }
-
-        let item = document.getElementById("productCountContainer");
-
-      
-
-
-       // item.addEventListener("mouseover", () => {
-         //   item.style.display = "none";
-       // });
-
-        //item.addEventListener("mouseout", () => {
-          //  item.style.display = "block";
-        //});
-
-
-
-    });
-*/
-   
 
 </script>

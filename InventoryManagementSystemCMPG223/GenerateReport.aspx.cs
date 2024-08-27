@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Data;
-using System.Linq;
+using System.Data.SqlClient;
 using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using iTextSharp;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 
@@ -16,23 +11,17 @@ namespace InventoryManagementSystemCMPG223
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            GetProductData();
+            
         }
 
-
-
-        private DataTable GetProductData()
+        private DataTable GetProductData(string userQuery)
         {
             DataTable dt = new DataTable();
-            string connStr = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManSysDB;Integrated Security=True;TrustServerCertificate=True"; ;
+            string connStr = @"Data Source=GIVEN\SQLEXPRESS;Initial Catalog=InventoryManSysDB;Integrated Security=True;TrustServerCertificate=True";
+
             using (SqlConnection conn = new SqlConnection(connStr))
             {
-                //string query = "SELECT OrderNumber, Quantity, OrderDate FROM Orders"; // Adjust your query accordingly
-
-                string query = "select * from products";
-
-                //use join statements to query multiple tables
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+                using (SqlCommand cmd = new SqlCommand(userQuery, conn))
                 {
                     conn.Open();
                     using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
@@ -44,51 +33,63 @@ namespace InventoryManagementSystemCMPG223
             return dt;
         }
 
-
-
-
-
-        private void ExportToPDF(DataTable dt)
+        private void ExportToPDF(Document doc, DataTable dt, string tableTitle)
         {
-            Document doc = new Document();
-            PdfWriter.GetInstance(doc, Response.OutputStream);
-            doc.Open();
-
-            PdfPTable table = new PdfPTable(dt.Columns.Count);
-            foreach (DataColumn col in dt.Columns)
+            if (dt.Rows.Count > 0)
             {
-                PdfPCell cell = new PdfPCell(new Phrase(col.ColumnName));
-                table.AddCell(cell);
-            }
+                // Add a title for the table
+                Paragraph title = new Paragraph(tableTitle, FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16));
+                title.Alignment = Element.ALIGN_CENTER;
+                title.SpacingAfter = 10;
+                doc.Add(title);
 
-            foreach (DataRow row in dt.Rows)
-            {
-                foreach (var item in row.ItemArray)
+                PdfPTable table = new PdfPTable(dt.Columns.Count);
+
+                // Adding headers
+                foreach (DataColumn col in dt.Columns)
                 {
-                    table.AddCell(item.ToString());
+                    PdfPCell cell = new PdfPCell(new Phrase(col.ColumnName));
+                    cell.BackgroundColor = BaseColor.LIGHT_GRAY;
+                    table.AddCell(cell);
                 }
-            }
 
-            doc.Add(table);
-            doc.Close();
-            
-            Response.ContentType = "application/pdf";
-           
-            Response.AddHeader("content-disposition", "attachment;filename=ProductReport.pdf");
-            Response.Cache.SetCacheability(HttpCacheability.NoCache);
-            Response.Write(doc);
-            Response.End();
+                // Adding data rows
+                foreach (DataRow row in dt.Rows)
+                {
+                    foreach (var item in row.ItemArray)
+                    {
+                        table.AddCell(item.ToString());
+                    }
+                }
+
+                doc.Add(table);
+                doc.Add(new Paragraph("\n")); // Add space between tables
+            }
         }
 
         protected void GenerateReportBtn_Click1(object sender, EventArgs e)
         {
-          
+            // Initialize the PDF document
+            Document doc = new Document();
+            PdfWriter.GetInstance(doc, Response.OutputStream);
+            doc.Open();
 
-            DataTable dt = GetProductData();
+            // Retrieve data for each table and add to the PDF
+            ExportToPDF(doc, GetProductData("SelectAllProducts"), "Product Report");
+            ExportToPDF(doc, GetProductData("SelectAllUsers"), "Users Report");
+            ExportToPDF(doc, GetProductData("SelectAllCustomers"), "Customers Report");
+            ExportToPDF(doc, GetProductData("SelectAllSpecials"), "Specials Report");
+            ExportToPDF(doc, GetProductData("SelectAllSuppliers"), "Suppliers Report");
+         
 
-           
-                ExportToPDF(dt);
-            
+            doc.Close();
+
+            // Prepare response for the client
+            Response.ContentType = "application/pdf";
+            Response.AddHeader("content-disposition", "attachment;filename=CombinedReport.pdf");
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.Write(doc);
+            Response.End();
         }
     }
 }

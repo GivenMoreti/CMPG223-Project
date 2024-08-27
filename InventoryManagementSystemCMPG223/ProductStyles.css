@@ -1,25 +1,48 @@
 ﻿
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-family: 'Cascadia Code';
+/*    font-family: 'Comic Sans MS';*/
+  
 }
 
 .sidebar {
     background-color: mintcream;
 }
 
-.mid-container {
-    background-color: mintcream;
+.container-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:-350px;
+}
+
+#SearchItem {
+    border: 1px solid #ccc;
+   
+}
+
+#productCountContainer {
+    /*    flex: 1 1 25%;*/
+    box-sizing: border-box;
     background-color: ghostwhite;
-    display:flex;
-    flex-direction:row;
-    width:0px;
+    padding: 10px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 10px;
+    width:300px;
+}
+
+#productCountContainer {
+    padding:30px;
+/*    border: 1px solid #ccc;*/
+    text-align: center;
+    box-shadow:2px 20px 10px lightgray;
+    
 }
 
 body {
-    background-color: deepskyblue;
     background-color: ghostwhite;
+    background-color: mintcream;
 }
 
 .div-item {
@@ -34,7 +57,7 @@ body {
     opacity: 0.7;
 }
 
-#Name, #Description, #Size, #Price1, #ProductId, #SearchItem, #CustomerIdTB, #txtSupplierId, #CustomerNameTB, #CustomerEmailTB, #Username, #UserPassword, #UserId, #Username1, #UserIdTB, #UsernameTB, #Price, #txtSupplierId, #txtEmail, #txtName, #supplierName, #supplierEmail, #txtProductId, #txtDiscount, #pId, #SpecialId, #sId {
+#Name, #Description, #Size, #Price1, #ProductId, #SearchItem, #inventoryId, #CustomerIdTB, #txtSupplierId, #CustomerNameTB, #CustomerEmailTB, #Username, #UserPassword, #UserId, #Username1, #UserIdTB, #UsernameTB, #Price, #txtSupplierId, #txtEmail, #txtName, #supplierName, #supplierEmail, #txtProductId, #txtDiscount, #pId, #SpecialId, #sId, #supplierId, #quantityInStock {
     border-radius: 5px;
     border: 0px;
     margin: 5px;
@@ -42,7 +65,7 @@ body {
     width: 100%;
 }
 
-#AddProductBtn, #CreateCustomerProfileBtn, #DeleteCustomerBtn, #SignInBtn, #SignUpBtn, #UpdateCustomerBtn, #DeleteSupplierBtn, #UpdateUserBtn, #DeleteUserBtn, #GenerateReportBtn, #CreateSupplierBtn, #UpdateSupplierBtn, #CreateSpecialBtn, #UpdateSpecialBtn, #DeleteSpecialBtn {
+#AddProductBtn, #CreateCustomerProfileBtn, #DeleteCustomerBtn, #SignInBtn, #SignUpBtn, #UpdateCustomerBtn, #DeleteSupplierBtn, #UpdateUserBtn, #DeleteUserBtn, #GenerateReportBtn, #CreateSupplierBtn, #UpdateSupplierBtn, #CreateSpecialBtn, #UpdateSpecialBtn, #DeleteSpecialBtn, #GenerateReportBtn, #AddInventoryBtn {
     padding: 30px;
     width: 104%;
     border: 1px solid white;
@@ -120,24 +143,14 @@ body {
     text-align:center;
 }
 
-#productCountContainer {
-    background-color: lightslategray;
-    padding: 60px;
-    width: 100px;
-    text-align: center;
-    height: 100px;
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    border-radius: 10px;
-    margin-bottom: 40px;
-    margin-left: 40px;
-}
 
-#ProductCountLbl, #CustomerCountLbl, #UsersCountLbl, #SuppliersCountLbl, #SpecialsCountLbl {
+
+#ProductCountLbl, #CustomerCountLbl, #UsersCountLbl, #SuppliersCountLbl, #SpecialsCountLbl, #InventoryCountLbl {
     font-size: 20px;
-    color: white;
+    color: black;
     text-align: center;
+    opacity:0.7;
+ 
 }
 
 #LblGreet {
@@ -174,7 +187,7 @@ body {
     font-weight: 500;
     opacity: 0.8;
 }
-#CustomerGridView, #ProductsGridView, #UsersGridView {
+#CustomerGridView, #ProductsGridView, #UsersGridView,#InventoryGridView {
     width: 80%;
     height: 40%;
 }
@@ -202,3 +215,8 @@ body {
     border-radius: 10px;
     margin: 40px;
 }
+
+#header{
+    text-align:center;
+}
+

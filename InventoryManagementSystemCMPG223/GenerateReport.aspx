@@ -9,17 +9,38 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-                <h1>Reports | Outputs</h1>
-            <hr />
 
-       
+        <table style="width: 100%;">
+            <tr>
+                <td style="width: 20%;">&nbsp;</td>
+                <td>
+                      <h1 id="header">Reports | Outputs</h1>
+                </td>
+                <td style="width: 20%;">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <div class="content">
+                      
+                
+
+                        <asp:Button ID="GenerateReportBtn" runat="server" Text="Generate Report" OnClick="GenerateReportBtn_Click1" />
+                        <br />
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Homepage.aspx">Home</asp:HyperLink>
+                    </div>
 
 
-            <asp:Button ID="GenerateReportBtn" runat="server" Text="Generate Report" OnClick="GenerateReportBtn_Click1" />
-             <br />   
-            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Homepage.aspx">Home</asp:HyperLink>
-        </div>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+
     </form>
 </body>
 </html>

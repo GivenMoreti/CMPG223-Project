@@ -82,6 +82,17 @@ namespace InventoryManagementSystemCMPG223
                     SpecialsCountLbl.Text = countSpecials.ToString() + " Special";
                 }
 
+                //count inventory items
+                int countInventory = GetCount("CountInventory");
+                if (countInventory > 1)
+                {
+                    InventoryCountLbl.Text = countInventory.ToString() + " items in Inventory ";
+                }
+                else
+                {
+                    InventoryCountLbl.Text = countInventory.ToString() + " item in Inventory";
+                }
+
 
 
 

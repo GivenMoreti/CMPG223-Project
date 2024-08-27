@@ -79,17 +79,20 @@
       <DependentUpon>InventoryManagementSystemDB.mdf</DependentUpon>
     </Content>
     <Content Include="CreateCustomer.aspx" />
+    <Content Include="CreateInventory.aspx" />
     <Content Include="CreateProduct.aspx" />
     <Content Include="CreateSpecial.aspx" />
     <Content Include="CreateSupplier.aspx" />
     <Content Include="Customers.aspx" />
     <Content Include="DeleteCustomer.aspx" />
+    <Content Include="DeleteInventory.aspx" />
     <Content Include="DeleteProduct.aspx" />
     <Content Include="DeleteSpecial.aspx" />
     <Content Include="DeleteSupplier.aspx" />
     <Content Include="DeleteUser.aspx" />
     <Content Include="GenerateReport.aspx" />
     <Content Include="Homepage.aspx" />
+    <Content Include="Inventory.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="Products.aspx" />
     <Content Include="ProductStyles.css" />
@@ -97,6 +100,7 @@
     <Content Include="Specials.aspx" />
     <Content Include="Suppliers.aspx" />
     <Content Include="UpdateCustomer.aspx" />
+    <Content Include="UpdateInventory.aspx" />
     <Content Include="UpdateProduct.aspx" />
     <Content Include="UpdateSpecial.aspx" />
     <Content Include="UpdateSupplier.aspx" />
@@ -111,6 +115,13 @@
     </Compile>
     <Compile Include="CreateCustomer.aspx.designer.cs">
       <DependentUpon>CreateCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateInventory.aspx.cs">
+      <DependentUpon>CreateInventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateInventory.aspx.designer.cs">
+      <DependentUpon>CreateInventory.aspx</DependentUpon>
     </Compile>
     <Compile Include="CreateProduct.aspx.cs">
       <DependentUpon>CreateProduct.aspx</DependentUpon>
@@ -146,6 +157,13 @@
     </Compile>
     <Compile Include="DeleteCustomer.aspx.designer.cs">
       <DependentUpon>DeleteCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteInventory.aspx.cs">
+      <DependentUpon>DeleteInventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteInventory.aspx.designer.cs">
+      <DependentUpon>DeleteInventory.aspx</DependentUpon>
     </Compile>
     <Compile Include="DeleteProduct.aspx.cs">
       <DependentUpon>DeleteProduct.aspx</DependentUpon>
@@ -189,6 +207,13 @@
     <Compile Include="Homepage.aspx.designer.cs">
       <DependentUpon>Homepage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Inventory.aspx.cs">
+      <DependentUpon>Inventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventory.aspx.designer.cs">
+      <DependentUpon>Inventory.aspx</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -231,6 +256,13 @@
     </Compile>
     <Compile Include="UpdateCustomer.aspx.designer.cs">
       <DependentUpon>UpdateCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateInventory.aspx.cs">
+      <DependentUpon>UpdateInventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateInventory.aspx.designer.cs">
+      <DependentUpon>UpdateInventory.aspx</DependentUpon>
     </Compile>
     <Compile Include="UpdateProduct.aspx.cs">
       <DependentUpon>UpdateProduct.aspx</DependentUpon>
