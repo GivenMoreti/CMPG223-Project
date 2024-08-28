@@ -65,7 +65,7 @@ body {
     width: 100%;
 }
 
-#AddProductBtn, #CreateCustomerProfileBtn, #DeleteCustomerBtn, #SignInBtn, #SignUpBtn, #UpdateCustomerBtn, #DeleteSupplierBtn, #UpdateUserBtn, #DeleteUserBtn, #GenerateReportBtn, #CreateSupplierBtn, #UpdateSupplierBtn, #CreateSpecialBtn, #UpdateSpecialBtn, #DeleteSpecialBtn, #GenerateReportBtn, #AddInventoryBtn {
+#AddProductBtn, #CreateCustomerProfileBtn, #UpdateInventoryBtn,#DeleteInventoryBtn, #DeleteCustomerBtn, #SignInBtn, #SignUpBtn, #UpdateCustomerBtn, #DeleteSupplierBtn, #UpdateUserBtn, #DeleteUserBtn, #GenerateReportBtn, #CreateSupplierBtn, #UpdateSupplierBtn, #CreateSpecialBtn, #UpdateSpecialBtn, #DeleteSpecialBtn, #GenerateReportBtn, #AddInventoryBtn {
     padding: 30px;
     width: 104%;
     border: 1px solid white;

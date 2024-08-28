@@ -80,7 +80,12 @@ namespace InventoryManagementSystemCMPG223
             ExportToPDF(doc, GetProductData("SelectAllCustomers"), "Customers Report");
             ExportToPDF(doc, GetProductData("SelectAllSpecials"), "Specials Report");
             ExportToPDF(doc, GetProductData("SelectAllSuppliers"), "Suppliers Report");
-         
+            ExportToPDF(doc, GetProductData("SelectAllInventory"), "Inventory Report");
+
+            //ExportToPDF(doc, GetProductData("SelectAllOrders"), "Orders Report");
+            //ExportToPDF(doc, GetProductData("SelectAllOrderedProducts"), "Ordered Product Report");
+
+
 
             doc.Close();
 
