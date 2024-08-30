@@ -22,6 +22,25 @@ namespace InventoryManagementSystemCMPG223
         DataSet ds;
 
 
+        protected void ProductsGridView_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "SelectProduct")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+                GridViewRow selectedRow = ProductsGridView.Rows[index];
+                string productId = selectedRow.Cells[0].Text;
+
+                // Store the selected product in a session or cookie
+                List<string> selectedProducts = Session["SelectedProducts"] as List<string> ?? new List<string>();
+                selectedProducts.Add(productId);
+                Session["SelectedProducts"] = selectedProducts;
+
+                // Redirect to the order page
+                Response.Redirect("Order.aspx");
+            }
+        }
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
             //IF NOT POSTBACK
@@ -32,9 +51,6 @@ namespace InventoryManagementSystemCMPG223
 
             }
         }
-
-        //CreateProduct cp = new CreateProduct();
-        //cp.GetProducts(query);
 
 
         //RETRIEVALS
@@ -122,7 +138,8 @@ namespace InventoryManagementSystemCMPG223
                     conn.Open();
 
                     cmd = new SqlCommand(query, conn);
-                
+                    cmd.CommandType = CommandType.StoredProcedure;
+
                     cmd.Parameters.AddWithValue("searchKey",searchKey);
                     
                     
@@ -152,24 +169,24 @@ namespace InventoryManagementSystemCMPG223
         
         protected void SearchBtn_Click(object sender, EventArgs e)
         {
-           /*
-            string searchKey = SearchItem.Text;
-            string query ="select * from producttable where name like @searchKey or description like @searchKey or price like @searchKey or size like @searchKey";
-
-            if (!string.IsNullOrEmpty(searchKey))
-            {
-                GetProducts(query, searchKey);
-
-            }
-            else
-            {
-                FeedbackLbl.Text = "search box empty";
-                GetProducts("select * from producttable");
-            }
-
-            */
             
+             string searchKey = SearchItem.Text;
+            //string query ="Select * from products where name like @searchKey or description like @searchKey or price like @searchKey or size like @searchKey";
+            string query = "SearchProducts";
+             if (!string.IsNullOrEmpty(searchKey))
+             {
+                 GetProducts(query, searchKey);
+
+             }
+             else
+             {
+                 FeedbackLbl.Text = "search box empty";
+                 GetProducts("SelectAllProducts");
+             }
+
+             
+
         }
-        
+
     }
 }

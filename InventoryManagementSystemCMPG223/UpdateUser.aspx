@@ -29,11 +29,11 @@
          <td class="content">
              
              <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="UserIdTB" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
-             <asp:TextBox ID="UserIdTB" runat="server" placeholder="User id"></asp:TextBox><br />
+             <asp:TextBox ID="UserIdTB" runat="server" placeholder="User Id"></asp:TextBox><br />
 
 
-             <asp:RequiredFieldValidator ControlToValidate="UsernameTB" ID="RequiredFieldValidator2" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
-             <asp:TextBox ID="UsernameTB" runat="server" placeholder="Username"></asp:TextBox><br />
+             <asp:RegularExpressionValidator ControlToValidate="UsernameTB" ID="RegularExpressionValidator1" runat="server" ErrorMessage="*"></asp:RegularExpressionValidator>
+             <asp:TextBox ID="UsernameTB" runat="server" placeholder="Email"></asp:TextBox><br />
 
              <asp:RequiredFieldValidator ControlToValidate="UserPassword" ID="RequiredFieldValidator3" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
             <asp:TextBox ID="UserPassword" runat="server" placeholder="Password"></asp:TextBox><br />

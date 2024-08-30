@@ -24,8 +24,8 @@
 
                       
                         
-                        <asp:RequiredFieldValidator ControlToValidate="Username1" ID="RequiredFieldValidator2" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
-                        <asp:TextBox ID="Username1" runat="server" placeholder="Enter your name"></asp:TextBox><br />
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="Username1" ErrorMessage="*" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                        <asp:TextBox ID="Username1" runat="server" placeholder="Enter your email"></asp:TextBox><br />
                         
                         
                         <asp:RequiredFieldValidator ControlToValidate="UserPassword"  ID="RequiredFieldValidator3" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>

@@ -34,7 +34,7 @@ namespace InventoryManagementSystemCMPG223
                 adapter = new SqlDataAdapter();
                 conn.Open();
 
-                //GET CUSTOMER DETAILS FROM THE FORM
+                //GET USER DETAILS FROM THE FORM
                 int ID = Int32.Parse(UserIdTB.Text);
                 string Username = UsernameTB.Text, Password = UserPassword.Text;
 

@@ -5,10 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9D17DD1F-AAD5-4FFF-8A41-20AB88C27B22}|InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223.csproj|c:\\users\\givenchie\\desktop\\inventorymanagementsystemcmpg223\\inventorymanagementsystemcmpg223\\generatereport.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D17DD1F-AAD5-4FFF-8A41-20AB88C27B22}|InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223.csproj|solutionrelative:inventorymanagementsystemcmpg223\\generatereport.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D17DD1F-AAD5-4FFF-8A41-20AB88C27B22}|InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223.csproj|C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\inventorymanagementsystemcmpg223\\productstyles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{9D17DD1F-AAD5-4FFF-8A41-20AB88C27B22}|InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223.csproj|solutionrelative:inventorymanagementsystemcmpg223\\productstyles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,27 +24,14 @@
               "RelativeDocumentMoniker": "InventoryManagementSystemCMPG223\\GenerateReport.aspx.cs",
               "ToolTip": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223\\GenerateReport.aspx.cs",
               "RelativeToolTip": "InventoryManagementSystemCMPG223\\GenerateReport.aspx.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAywFUAAABbAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAIwFQAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T08:17:53.959Z",
+              "WhenOpened": "2024-08-30T10:51:57.973Z",
               "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductStyles.css",
-              "DocumentMoniker": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223\\ProductStyles.css",
-              "RelativeDocumentMoniker": "InventoryManagementSystemCMPG223\\ProductStyles.css",
-              "ToolTip": "C:\\Users\\Givenchie\\Desktop\\InventoryManagementSystemCMPG223\\InventoryManagementSystemCMPG223\\ProductStyles.css",
-              "RelativeToolTip": "InventoryManagementSystemCMPG223\\ProductStyles.css",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAADYAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-08-27T15:46:43.211Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",

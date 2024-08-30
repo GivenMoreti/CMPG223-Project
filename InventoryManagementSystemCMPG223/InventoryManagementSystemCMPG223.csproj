@@ -94,6 +94,8 @@
     <Content Include="Homepage.aspx" />
     <Content Include="Inventory.aspx" />
     <Content Include="LoginPage.aspx" />
+    <Content Include="Order.aspx" />
+    <Content Include="OrderConfirmation.aspx" />
     <Content Include="Products.aspx" />
     <Content Include="ProductStyles.css" />
     <Content Include="SignUpPage.aspx" />
@@ -220,6 +222,20 @@
     </Compile>
     <Compile Include="LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderConfirmation.aspx.cs">
+      <DependentUpon>OrderConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderConfirmation.aspx.designer.cs">
+      <DependentUpon>OrderConfirmation.aspx</DependentUpon>
     </Compile>
     <Compile Include="Products.aspx.cs">
       <DependentUpon>Products.aspx</DependentUpon>

@@ -22,10 +22,11 @@
                     <td style="width: 20%;">&nbsp;</td>
                     <td class="content">
 
-
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ControlToValidate="Username" runat="server" ErrorMessage="*" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                         <asp:TextBox ID="Username" runat="server" placeholder="Enter your name"></asp:TextBox><br />
 
 
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="UserPassword" ErrorMessage="*"></asp:RequiredFieldValidator>
                         <asp:TextBox ID="UserPassword" type="password" runat="server" placeholder="Enter your password"></asp:TextBox><br />
 
                         <asp:Button ID="SignInBtn" runat="server" Text="Sign in" OnClick="SignInBtn_Click" />
